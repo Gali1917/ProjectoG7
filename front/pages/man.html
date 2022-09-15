@@ -13,7 +13,7 @@
 
     <link rel="stylesheet" href="../styles/styles.css">
     <link rel="stylesheet" href="../styles/styles_man.css">
-    <link rel="shortcut icon" href="./assets/images/logoS.png">
+    <link rel="shortcut icon" href="../assets/images/logoS.png">
 
 </head>
 
@@ -102,7 +102,10 @@
             <div class="container-fluid">
                 <div class="row" id="titulo-categoria">
                     <div class="col" id="titulo-section">
-                        <h3>Todo</h3>
+                        <h3 id="todo-caballeros" class="titulo-activo" onClick="todoCaballeros()">Todo</h3>
+                        <h3 id="prendas-superiores-caballeros"class="titulo-inactivo" onClick="listarPrendasSuperioresCaballeros()">Prendas Superiores</h3>
+                        <h3 id="prendas-inferiores-caballeros"class="titulo-inactivo" onClick="listarPrendasInferioresCaballeros()">Prendas Inferiores</h3>
+                        <h3 id="conjuntos-caballeros"class="titulo-inactivo" onClick="listarConjuntosCaballeros()">Conjuntos</h3>
                         <img src="../assets/images/back.png" onClick="btnAtras()" alt="Atras">
                     </div>
                 </div>
@@ -300,6 +303,7 @@
     </footer>
         <!-- place footer here -->
     </footer>
+    <script src="../app/start.js"></script>
 
     <script src="../index.js"></script>
     <!-- Bootstrap JavaScript Libraries -->
