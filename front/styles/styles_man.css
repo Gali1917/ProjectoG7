@@ -1,0 +1,77 @@
+:root{
+    /* --c1: #CCDBDC;
+    --c2: #80CED7;
+    --c3: #63C7B2;
+    --c4: #8E6C88;
+    --c5: #263D42; */
+    --c1: #F9EAA9;
+    --c2: #F7DC5F;
+    --c3: #F7DC5F;
+    --c4: #787151;
+    --c5: #000000;
+}   
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#portada-man{
+    background-image: url(../assets/images/portada-man.jpg);
+    height: 300px;
+    width: 100vw;
+    margin: 0 auto;
+    margin-top: 56px;
+    padding: 0;
+    object-fit:cover;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+
+}
+#titulo-categoria{
+    display: none;
+}
+#titulo-section{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    margin-bottom: 20px;
+    
+}
+#titulo-section h3{
+    margin-top: 8px;
+}
+
+#titulo-section img{
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--c3);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+@media(min-width: 768px){
+    #portada-man{
+        height: 500px;
+    }
+}
+
+@media(min-width: 1200px){
+    #portada-man{
+        border-radius: 30px;
+        max-width: 1100px;
+        height: 600px;
+    }
+    .btn-card-caballeros{
+        display: none;
+    }
+    .sub-cat{
+        width: 50%;
+    }
+    #categoria-caballeros{
+        box-shadow: 0 0 10px var(--c1),
+                    0 0 30px var(--c1),
+                    0 0 60px var(--c1);
+    }
+}
