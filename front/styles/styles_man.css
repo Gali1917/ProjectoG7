@@ -41,8 +41,17 @@
 }
 #titulo-section h3{
     margin-top: 8px;
+    color: var(--c1);
 }
-
+.titulo-activo{
+    font-size: 28px;
+}
+.titulo-inactivo{
+    font-size: 16px;
+    opacity: 0.7;
+    cursor: pointer;
+    display: none;
+}
 #titulo-section img{
     width: 40px;
     height: 40px;
@@ -54,6 +63,9 @@
 @media(min-width: 768px){
     #portada-man{
         height: 500px;
+    }
+    .titulo-inactivo{
+        display: block;
     }
 }
 
@@ -73,5 +85,8 @@
         box-shadow: 0 0 10px var(--c1),
                     0 0 30px var(--c1),
                     0 0 60px var(--c1);
+    }
+    #titulo-section{
+        display: none;
     }
 }

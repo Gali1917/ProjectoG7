@@ -13,7 +13,7 @@
 
     <link rel="stylesheet" href="../styles/styles.css">
     <link rel="stylesheet" href="../styles/styles_woman.css">
-    <link rel="shortcut icon" href="./assets/images/logoS.png">
+    <link rel="shortcut icon" href="../assets/images/logoS.png">
 
 </head>
 
@@ -102,7 +102,10 @@
             <div class="container-fluid">
                 <div class="row" id="titulo-categoria">
                     <div class="col" id="titulo-section">
-                        <h3>Todo</h3>
+                        <h3 id="todo-damas" class="titulo-activo" onClick="todoDamas()">Todo</h3>
+                        <h3 id="prendas-superiores-damas"class="titulo-inactivo" onClick="listarPrendasSuperioresDamas()">Prendas Superiores</h3>
+                        <h3 id="prendas-inferiores-damas"class="titulo-inactivo" onClick="listarPrendasInferioresDamas()">Prendas Inferiores</h3>
+                        <h3 id="conjuntos-damas"class="titulo-inactivo" onClick="listarConjuntosDamas()">Conjuntos</h3>
                         <img src="../assets/images/back.png" onClick="btnAtras()" alt="Atras">
                     </div>
                 </div>
@@ -299,6 +302,7 @@
         </div>
     </footer>
     <script src="../index.js"></script>
+    <script src="../app/start.js"></script>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
         integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
