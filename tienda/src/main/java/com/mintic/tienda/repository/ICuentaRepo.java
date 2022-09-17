@@ -6,6 +6,6 @@ import com.mintic.tienda.entity.Cuenta;
 
 
 @Repository
-public interface ICuentaRepo extends JpaRepository<Cuenta, Integer>{
+public interface ICuentaRepo extends JpaRepository<Cuenta, Long>{
     
 }

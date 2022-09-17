@@ -15,7 +15,7 @@ public class Cuenta {
     @Id
     @GeneratedValue( strategy=GenerationType.AUTO )
     @Column(name = "id_cuenta")
-    private int idCuenta;
+    private Long idCuenta;
     
     @Column(name = "user")
     private String user;
@@ -24,13 +24,13 @@ public class Cuenta {
     private String pass;
 
     @Column(name = "id_rol")
-    private String idRol;
+    private Long idRol;
 
-    public int getIdCuenta() {
+    public Long getIdCuenta() {
         return idCuenta;
     }
 
-    public void setIdCuenta(int idCuenta) {
+    public void setIdCuenta(Long idCuenta) {
         this.idCuenta = idCuenta;
     }
 
@@ -50,11 +50,11 @@ public class Cuenta {
         this.pass = pass;
     }
 
-    public String getIdRol() {
+    public Long getIdRol() {
         return idRol;
     }
 
-    public void setIdRol(String idRol) {
+    public void setIdRol(Long idRol) {
         this.idRol = idRol;
     }
 }

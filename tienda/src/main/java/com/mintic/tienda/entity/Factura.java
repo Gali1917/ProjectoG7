@@ -1,5 +1,7 @@
 package com.mintic.tienda.entity;
 
+import java.time.ZonedDateTime;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,46 +17,47 @@ public class Factura {
     @Id
     @GeneratedValue( strategy=GenerationType.AUTO )
     @Column(name = "id_factura")
-    private int idFactura;
+    private Long idFactura;
     
     @Column(name = "fecha")
-    private String fecha;
+    private ZonedDateTime fecha;
 
     @Column(name = "id_cliente")
-    private String idCliente;
+    private Long idCliente;
 
     @Column(name = "id_factura_prenda")
-    private String idFacturaPrenda;
+    private Long idFacturaPrenda;
 
-    public int getIdFactura() {
+
+    public Long getIdFactura() {
         return idFactura;
     }
 
-    public void setIdFactura(int idFactura) {
+    public void setIdFactura(Long idFactura) {
         this.idFactura = idFactura;
     }
 
-    public String getFecha() {
+    public ZonedDateTime getFecha() {
         return fecha;
     }
 
-    public void setFecha(String fecha) {
+    public void setFecha(ZonedDateTime fecha) {
         this.fecha = fecha;
     }
 
-    public String getIdCliente() {
+    public Long getIdCliente() {
         return idCliente;
     }
 
-    public void setIdCliente(String idCliente) {
+    public void setIdCliente(Long idCliente) {
         this.idCliente = idCliente;
     }
 
-    public String getIdFacturaPrenda() {
+    public Long getIdFacturaPrenda() {
         return idFacturaPrenda;
     }
 
-    public void setIdFacturaPrenda(String idFacturaPrenda) {
+    public void setIdFacturaPrenda(Long idFacturaPrenda) {
         this.idFacturaPrenda = idFacturaPrenda;
     }
 }

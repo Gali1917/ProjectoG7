@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 import com.mintic.tienda.entity.Genero;
 
 @Repository
-public interface IGeneroRepo extends JpaRepository<Genero, Integer>{
+public interface IGeneroRepo extends JpaRepository<Genero, Long>{
     
 }

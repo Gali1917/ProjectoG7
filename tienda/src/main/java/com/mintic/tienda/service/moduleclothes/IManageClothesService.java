@@ -11,7 +11,7 @@ public interface IManageClothesService extends IManageClothesDomain {
 
    List<Prenda> getAllPrendas();
 
-   Prenda updatePrenda(Prenda prenda, Integer idPrenda);
+   Prenda updatePrenda(Prenda prenda, Long idPrenda);
 
-   void deletePrendaById(Integer idPrenda);
+   void deletePrendaById(Long idPrenda);
 }

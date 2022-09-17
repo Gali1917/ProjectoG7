@@ -15,16 +15,16 @@ public class Marca {
     @Id
     @GeneratedValue( strategy=GenerationType.AUTO )
     @Column(name = "id_marca")
-    private int idMarca;
+    private Long idMarca;
     
     @Column(name = "descripcion")
     private String descripcion;
 
-    public int getIdMarca() {
+    public Long getIdMarca() {
         return idMarca;
     }
 
-    public void setIdMarca(int idMarca) {
+    public void setIdMarca(Long idMarca) {
         this.idMarca = idMarca;
     }
 

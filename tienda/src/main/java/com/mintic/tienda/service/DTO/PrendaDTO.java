@@ -3,75 +3,102 @@ package com.mintic.tienda.service.DTO;
 
 public class PrendaDTO {
 
-    private int idPrenda;
+    private Long idPrenda;
     private String nombre;
-    private String idTalla;
-    private String idTipoPrenda;
-    private String idGenero;
-    private String precio;
-    private String idMarca;
+    private Long idTalla;
+    private Long idTipoPrenda;
+    private Long idGenero;
+    private Long precio;
+    private Long idMarca;
     private String detalle;
-    private String cantidad;
+    private Integer cantidad;
+    private String imagen;
 
-    public int getIdPrenda() {
+
+    public Long getIdPrenda() {
         return idPrenda;
     }
-    public void setIdPrenda(int idPrenda) {
+
+    public void setIdPrenda(Long idPrenda) {
         this.idPrenda = idPrenda;
     }
+
     public String getNombre() {
         return nombre;
     }
+
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    public String getIdTalla() {
+
+    public Long getIdTalla() {
         return idTalla;
     }
-    public void setIdTalla(String idTalla) {
+
+    public void setIdTalla(Long idTalla) {
         this.idTalla = idTalla;
     }
-    public String getIdTipoPrenda() {
+
+    public Long getIdTipoPrenda() {
         return idTipoPrenda;
     }
-    public void setIdTipoPrenda(String idTipoPrenda) {
+
+    public void setIdTipoPrenda(Long idTipoPrenda) {
         this.idTipoPrenda = idTipoPrenda;
     }
-    public String getIdGenero() {
+
+    public Long getIdGenero() {
         return idGenero;
     }
-    public void setIdGenero(String idGenero) {
+
+    public void setIdGenero(Long idGenero) {
         this.idGenero = idGenero;
     }
-    public String getPrecio() {
+
+    public Long getPrecio() {
         return precio;
     }
-    public void setPrecio(String precio) {
+
+    public void setPrecio(Long precio) {
         this.precio = precio;
     }
-    public String getIdMarca() {
+
+    public Long getIdMarca() {
         return idMarca;
     }
-    public void setIdMarca(String idMarca) {
+
+    public void setIdMarca(Long idMarca) {
         this.idMarca = idMarca;
     }
+
     public String getDetalle() {
         return detalle;
     }
+
     public void setDetalle(String detalle) {
         this.detalle = detalle;
     }
-    public String getCantidad() {
+
+    public Integer getCantidad() {
         return cantidad;
     }
-    public void setCantidad(String cantidad) {
-        cantidad = cantidad;
+
+    public void setCantidad(Integer cantidad) {
+        this.cantidad = cantidad;
+    }
+
+    public String getImagen() {
+        return imagen;
     }
     
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
+    }
+
     @Override
     public String toString() {
         return "PrendaDTO [cantidad=" + cantidad + ", detalle=" + detalle + ", idGenero=" + idGenero + ", idMarca="
                 + idMarca + ", idPrenda=" + idPrenda + ", idTalla=" + idTalla + ", idTipoPrenda=" + idTipoPrenda
-                + ", nombre=" + nombre + ", precio=" + precio + "]";
+                + ", imagen=" + imagen + ", nombre=" + nombre + ", precio=" + precio + "]";
     }
 }

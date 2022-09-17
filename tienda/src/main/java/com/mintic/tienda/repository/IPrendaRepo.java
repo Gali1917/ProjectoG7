@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 import com.mintic.tienda.entity.Prenda;
 
 @Repository
-public interface IPrendaRepo extends JpaRepository<Prenda, Integer>{
+public interface IPrendaRepo extends JpaRepository<Prenda, Long>{
     
 }

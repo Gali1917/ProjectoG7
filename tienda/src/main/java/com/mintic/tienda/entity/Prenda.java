@@ -15,37 +15,41 @@ public class Prenda {
     @Id
     @GeneratedValue( strategy=GenerationType.AUTO )
     @Column(name = "id_prenda")
-    private int idPrenda;
+    private Long idPrenda;
     
     @Column(name = "nombre")
     private String nombre;
 
     @Column(name = "id_talla")
-    private String idTalla;
+    private Long idTalla;
 
     @Column(name = "id_tipo_prenda")
-    private String idTipoPrenda;
+    private Long idTipoPrenda;
 
     @Column(name = "id_genero")
-    private String idGenero;
+    private Long idGenero;
 
     @Column(name = "precio")
-    private String precio;
+    private Long precio;
 
     @Column(name = "id_marca")
-    private String idMarca;
+    private Long idMarca;
 
     @Column(name = "detalle")
     private String detalle;
 
     @Column(name = "cantidad_total")
-    private String Cantidad;
+    private Integer cantidad;
 
-    public int getIdPrenda() {
+    @Column(name = "imagen")
+    private String imagen;
+    
+
+    public Long getIdPrenda() {
         return idPrenda;
     }
 
-    public void setIdPrenda(int idPrenda) {
+    public void setIdPrenda(Long idPrenda) {
         this.idPrenda = idPrenda;
     }
 
@@ -57,43 +61,43 @@ public class Prenda {
         this.nombre = nombre;
     }
 
-    public String getIdTalla() {
+    public Long getIdTalla() {
         return idTalla;
     }
 
-    public void setIdTalla(String idTalla) {
+    public void setIdTalla(Long idTalla) {
         this.idTalla = idTalla;
     }
 
-    public String getIdTipoPrenda() {
+    public Long getIdTipoPrenda() {
         return idTipoPrenda;
     }
 
-    public void setIdTipoPrenda(String idTipoPrenda) {
+    public void setIdTipoPrenda(Long idTipoPrenda) {
         this.idTipoPrenda = idTipoPrenda;
     }
 
-    public String getIdGenero() {
+    public Long getIdGenero() {
         return idGenero;
     }
 
-    public void setIdGenero(String idGenero) {
+    public void setIdGenero(Long idGenero) {
         this.idGenero = idGenero;
     }
 
-    public String getPrecio() {
+    public Long getPrecio() {
         return precio;
     }
 
-    public void setPrecio(String precio) {
+    public void setPrecio(Long precio) {
         this.precio = precio;
     }
 
-    public String getIdMarca() {
+    public Long getIdMarca() {
         return idMarca;
     }
 
-    public void setIdMarca(String idMarca) {
+    public void setIdMarca(Long idMarca) {
         this.idMarca = idMarca;
     }
 
@@ -105,11 +109,20 @@ public class Prenda {
         this.detalle = detalle;
     }
 
-    public String getCantidad() {
-        return Cantidad;
+    public Integer getCantidad() {
+        return cantidad;
     }
 
-    public void setCantidad(String cantidad) {
-        Cantidad = cantidad;
+    public void setCantidad(Integer cantidad) {
+        this.cantidad = cantidad;
     }
+
+    public String getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
+    }
+
 }

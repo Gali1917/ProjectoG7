@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 import com.mintic.tienda.entity.Cliente;
 
 @Repository
-public interface IClienteRepo extends JpaRepository<Cliente, Integer> {
+public interface IClienteRepo extends JpaRepository<Cliente, Long> {
     
 }

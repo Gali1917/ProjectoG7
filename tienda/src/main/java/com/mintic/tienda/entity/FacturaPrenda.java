@@ -15,35 +15,37 @@ public class FacturaPrenda {
     @Id
     @GeneratedValue( strategy=GenerationType.AUTO )
     @Column(name = "id_factura_prenda")
-    private int idFacturaPrenda;
+    private Long idFacturaPrenda;
     
     @Column(name = "id_prenda")
-    private String idPrenda;
+    private Long idPrenda;
 
     @Column(name = "cantidad_vendida")
-    private String cantidad;
+    private Integer cantidad;
 
-    public int getIdFacturaPrenda() {
+    public Long getIdFacturaPrenda() {
         return idFacturaPrenda;
     }
 
-    public void setIdFacturaPrenda(int idFacturaPrenda) {
+    public void setIdFacturaPrenda(Long idFacturaPrenda) {
         this.idFacturaPrenda = idFacturaPrenda;
     }
 
-    public String getIdPrenda() {
+    public Long getIdPrenda() {
         return idPrenda;
     }
 
-    public void setIdPrenda(String idPrenda) {
+    public void setIdPrenda(Long idPrenda) {
         this.idPrenda = idPrenda;
     }
 
-    public String getCantidad() {
+    public Integer getCantidad() {
         return cantidad;
     }
 
-    public void setCantidad(String cantidad) {
+    public void setCantidad(Integer cantidad) {
         this.cantidad = cantidad;
     }
+
+    
 }

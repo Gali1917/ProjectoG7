@@ -15,16 +15,16 @@ public class Talla {
     @Id
     @GeneratedValue( strategy=GenerationType.AUTO )
     @Column(name = "id_talla")
-    private int idTalla;
+    private Long idTalla;
     
     @Column(name = "talla")
     private String talla;
 
-    public int getIdTalla() {
+    public Long getIdTalla() {
         return idTalla;
     }
 
-    public void setIdTalla(int idTalla) {
+    public void setIdTalla(Long idTalla) {
         this.idTalla = idTalla;
     }
 

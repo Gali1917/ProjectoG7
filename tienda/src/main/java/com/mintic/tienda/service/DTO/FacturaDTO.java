@@ -1,38 +1,47 @@
 package com.mintic.tienda.service.DTO;
 
-
+import java.time.ZonedDateTime;
 
 public class FacturaDTO {
     
-    private int idFactura;
-    private String fecha;
-    private String idCliente;
-    private String idFacturaPrenda;
+    private Long idFactura;
+    private ZonedDateTime fecha;
+    private Long idCliente;
+    private Long idFacturaPrenda;
     
-    public int getIdFactura() {
+
+    public Long getIdFactura() {
         return idFactura;
     }
-    public void setIdFactura(int idFactura) {
+
+    public void setIdFactura(Long idFactura) {
         this.idFactura = idFactura;
     }
-    public String getFecha() {
+
+    public ZonedDateTime getFecha() {
         return fecha;
     }
-    public void setFecha(String fecha) {
+
+    public void setFecha(ZonedDateTime fecha) {
         this.fecha = fecha;
     }
-    public String getIdCliente() {
+
+    public Long getIdCliente() {
         return idCliente;
     }
-    public void setIdCliente(String idCliente) {
+
+    public void setIdCliente(Long idCliente) {
         this.idCliente = idCliente;
     }
-    public String getIdFacturaPrenda() {
+
+    public Long getIdFacturaPrenda() {
         return idFacturaPrenda;
     }
-    public void setIdFacturaPrenda(String idFacturaPrenda) {
+
+    public void setIdFacturaPrenda(Long idFacturaPrenda) {
         this.idFacturaPrenda = idFacturaPrenda;
     }
+
 
     @Override
     public String toString() {

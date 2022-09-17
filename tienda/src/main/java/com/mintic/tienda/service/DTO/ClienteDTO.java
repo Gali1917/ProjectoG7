@@ -2,18 +2,21 @@ package com.mintic.tienda.service.DTO;
 
 public class ClienteDTO {
     
-    private int idCliente;
+    private Long idCliente;
     private String nombre;
     
-    public int getIdCliente() {
+    public Long getIdCliente() {
         return idCliente;
     }
-    public void setIdCliente(int idCliente) {
+
+    public void setIdCliente(Long idCliente) {
         this.idCliente = idCliente;
     }
+
     public String getNombre() {
         return nombre;
     }
+    
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }

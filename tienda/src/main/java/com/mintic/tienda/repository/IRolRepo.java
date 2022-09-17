@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 import com.mintic.tienda.entity.Rol;
 
 @Repository
-public interface IRolRepo extends JpaRepository<Rol, Integer>{
+public interface IRolRepo extends JpaRepository<Rol, Long>{
     
 }

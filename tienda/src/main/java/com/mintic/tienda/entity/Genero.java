@@ -15,16 +15,16 @@ public class Genero {
     @Id
     @GeneratedValue( strategy=GenerationType.AUTO )
     @Column(name = "id_genero")
-    private int idGenero;
+    private Long idGenero;
     
     @Column(name = "descripcion")
     private String descripcion;
 
-    public int getIdGenero() {
+    public Long getIdGenero() {
         return idGenero;
     }
 
-    public void setIdGenero(int idGenero) {
+    public void setIdGenero(Long idGenero) {
         this.idGenero = idGenero;
     }
 

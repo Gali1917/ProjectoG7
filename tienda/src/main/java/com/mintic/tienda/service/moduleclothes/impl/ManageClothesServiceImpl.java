@@ -27,13 +27,13 @@ public class ManageClothesServiceImpl implements IManageClothesService {
     }
 
     @Override
-    public Prenda updatePrenda(Prenda prenda, Integer idPrenda) {
+    public Prenda updatePrenda(Prenda prenda, Long idPrenda) {
         // TODO Auto-generated method stub
         return null;
     }
 
     @Override
-    public void deletePrendaById(Integer idPrenda) {
+    public void deletePrendaById(Long idPrenda) {
         prendaRepo.deleteById(idPrenda); 
     }
     

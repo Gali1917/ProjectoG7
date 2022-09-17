@@ -3,18 +3,21 @@ package com.mintic.tienda.service.DTO;
 
 public class GeneroDTO {
     
-    private int idGenero;
+    private Long idGenero;
     private String descripcion;
     
-    public int getIdGenero() {
+    public Long getIdGenero() {
         return idGenero;
     }
-    public void setIdGenero(int idGenero) {
+
+    public void setIdGenero(Long idGenero) {
         this.idGenero = idGenero;
     }
+
     public String getDescripcion() {
         return descripcion;
     }
+    
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }

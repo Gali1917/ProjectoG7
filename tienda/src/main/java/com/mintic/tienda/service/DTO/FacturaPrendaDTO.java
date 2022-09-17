@@ -3,26 +3,31 @@ package com.mintic.tienda.service.DTO;
 
 public class FacturaPrendaDTO {
     
-    private int idFacturaPrenda;
-    private String idPrenda;
-    private String cantidad;
-    
-    public int getIdFacturaPrenda() {
+    private Long idFacturaPrenda;
+    private Long idPrenda;
+    private Integer cantidad;
+
+    public Long getIdFacturaPrenda() {
         return idFacturaPrenda;
     }
-    public void setIdFacturaPrenda(int idFacturaPrenda) {
+
+    public void setIdFacturaPrenda(Long idFacturaPrenda) {
         this.idFacturaPrenda = idFacturaPrenda;
     }
-    public String getIdPrenda() {
+
+    public Long getIdPrenda() {
         return idPrenda;
     }
-    public void setIdPrenda(String idPrenda) {
+
+    public void setIdPrenda(Long idPrenda) {
         this.idPrenda = idPrenda;
     }
-    public String getCantidad() {
+
+    public Integer getCantidad() {
         return cantidad;
     }
-    public void setCantidad(String cantidad) {
+    
+    public void setCantidad(Integer cantidad) {
         this.cantidad = cantidad;
     }
 

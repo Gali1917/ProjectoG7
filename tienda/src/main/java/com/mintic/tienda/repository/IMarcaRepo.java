@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 import com.mintic.tienda.entity.Marca;
 
 @Repository
-public interface IMarcaRepo extends JpaRepository<Marca, Integer>{
+public interface IMarcaRepo extends JpaRepository<Marca, Long>{
     
 }

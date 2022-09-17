@@ -3,18 +3,21 @@ package com.mintic.tienda.service.DTO;
 
 public class Rol {
     
-    private int idRol;
+    private Long idRol;
     private String tipoRol;
 
-    public int getIdRol() {
+    public Long getIdRol() {
         return idRol;
     }
-    public void setIdRol(int idRol) {
+
+    public void setIdRol(Long idRol) {
         this.idRol = idRol;
     }
+
     public String getTipoRol() {
         return tipoRol;
     }
+    
     public void setTipoRol(String tipoRol) {
         this.tipoRol = tipoRol;
     }

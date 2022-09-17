@@ -3,33 +3,40 @@ package com.mintic.tienda.service.DTO;
 public class CuentaDTO {
     
 
-    private int idCuenta;
+    private Long idCuenta;
     private String user;
     private String pass;
-    private String idRol;
+    private Long idRol;
 
-    public int getIdCuenta() {
+    public Long getIdCuenta() {
         return idCuenta;
     }
-    public void setIdCuenta(int idCuenta) {
+
+    public void setIdCuenta(Long idCuenta) {
         this.idCuenta = idCuenta;
     }
+
     public String getUser() {
         return user;
     }
+
     public void setUser(String user) {
         this.user = user;
     }
+
     public String getPass() {
         return pass;
     }
+
     public void setPass(String pass) {
         this.pass = pass;
     }
-    public String getIdRol() {
+
+    public Long getIdRol() {
         return idRol;
     }
-    public void setIdRol(String idRol) {
+    
+    public void setIdRol(Long idRol) {
         this.idRol = idRol;
     }
     

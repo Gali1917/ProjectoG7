@@ -3,18 +3,21 @@ package com.mintic.tienda.service.DTO;
 
 public class TipoPrendaDTO {
     
-    private int idTipoPrenda;
+    private Long idTipoPrenda;
     private String tipo;
 
-    public int getIdTipoPrenda() {
+    public Long getIdTipoPrenda() {
         return idTipoPrenda;
     }
-    public void setIdTipoPrenda(int idTipoPrenda) {
+
+    public void setIdTipoPrenda(Long idTipoPrenda) {
         this.idTipoPrenda = idTipoPrenda;
     }
+
     public String getTipo() {
         return tipo;
     }
+
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }

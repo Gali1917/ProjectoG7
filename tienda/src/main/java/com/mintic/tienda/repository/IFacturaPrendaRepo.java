@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 import com.mintic.tienda.entity.FacturaPrenda;
 
 @Repository
-public interface IFacturaPrendaRepo extends JpaRepository<FacturaPrenda, Integer>{
+public interface IFacturaPrendaRepo extends JpaRepository<FacturaPrenda, Long>{
     
 }
