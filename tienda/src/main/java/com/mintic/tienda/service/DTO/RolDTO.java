@@ -1,7 +1,7 @@
 package com.mintic.tienda.service.DTO;
 
 
-public class Rol {
+public class RolDTO {
     
     private Long idRol;
     private String tipoRol;
