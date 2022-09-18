@@ -1,9 +1,11 @@
 package com.mintic.tienda.mapper.impl;
 
+import org.springframework.stereotype.Component;
 import com.mintic.tienda.entity.TipoPrenda;
 import com.mintic.tienda.mapper.ITipoPrendaMapper;
 import com.mintic.tienda.service.DTO.TipoPrendaDTO;
 
+@Component
 public class TipoPrendaMapperImpl implements ITipoPrendaMapper{
 
     @Override

@@ -1,9 +1,11 @@
 package com.mintic.tienda.mapper.impl;
 
+import org.springframework.stereotype.Component;
 import com.mintic.tienda.entity.Talla;
 import com.mintic.tienda.mapper.ITallaMapper;
 import com.mintic.tienda.service.DTO.TallaDTO;
 
+@Component
 public class TallaMapperImpl implements ITallaMapper{
 
     @Override

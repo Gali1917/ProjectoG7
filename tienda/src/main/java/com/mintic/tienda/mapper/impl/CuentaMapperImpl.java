@@ -1,9 +1,11 @@
 package com.mintic.tienda.mapper.impl;
 
+import org.springframework.stereotype.Component;
 import com.mintic.tienda.entity.Cuenta;
 import com.mintic.tienda.mapper.ICuentaMapper;
 import com.mintic.tienda.service.DTO.CuentaDTO;
 
+@Component
 public class CuentaMapperImpl implements ICuentaMapper{
 
     @Override

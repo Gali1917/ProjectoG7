@@ -1,9 +1,11 @@
 package com.mintic.tienda.mapper.impl;
 
+import org.springframework.stereotype.Component;
 import com.mintic.tienda.entity.Genero;
 import com.mintic.tienda.mapper.IGeneroMapper;
 import com.mintic.tienda.service.DTO.GeneroDTO;
 
+@Component
 public class GeneroMapperImpl implements IGeneroMapper{
 
     @Override

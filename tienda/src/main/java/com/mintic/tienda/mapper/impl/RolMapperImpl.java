@@ -1,9 +1,11 @@
 package com.mintic.tienda.mapper.impl;
 
+import org.springframework.stereotype.Component;
 import com.mintic.tienda.entity.Rol;
 import com.mintic.tienda.mapper.IRolMapper;
 import com.mintic.tienda.service.DTO.RolDTO;
 
+@Component
 public class RolMapperImpl implements IRolMapper{
 
     @Override

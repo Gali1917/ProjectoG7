@@ -1,9 +1,11 @@
 package com.mintic.tienda.mapper.impl;
 
+import org.springframework.stereotype.Component;
 import com.mintic.tienda.entity.Marca;
 import com.mintic.tienda.mapper.IMarcaMapper;
 import com.mintic.tienda.service.DTO.MarcaDTO;
 
+@Component
 public class MarcaMapperImpl implements IMarcaMapper {
 
     @Override

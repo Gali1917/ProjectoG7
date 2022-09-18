@@ -1,9 +1,11 @@
 package com.mintic.tienda.mapper.impl;
 
+import org.springframework.stereotype.Component;
 import com.mintic.tienda.entity.FacturaPrenda;
 import com.mintic.tienda.mapper.IFacturaPrendaMapper;
 import com.mintic.tienda.service.DTO.FacturaPrendaDTO;
 
+@Component
 public class FacturaPrendaMapperImpl implements IFacturaPrendaMapper{
 
     @Override
