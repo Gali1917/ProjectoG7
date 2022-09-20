@@ -1,0 +1,221 @@
+:root{
+    --c1: #3f3f3d;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
+body{
+    font-size: 1.6rem;
+    position: relative;
+    color: black;
+    min-width: 375px;
+}
+header{
+    top: 0;
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #dbfeff;
+}
+.logo{
+    height: 100%;    
+}
+.logo img{
+    height: 100%;
+}
+nav li{
+    list-style: none;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+}
+main{
+    width: 100%;
+}
+#portada{
+    position: relative;
+}
+#portada-background{
+    width: 100%;
+}
+#portada-background video{
+    height: 70vh;
+    width: 100%;
+    object-fit:cover;
+}
+#portada-descripcion{
+    position: absolute;
+    bottom: 20%;
+    background-color:  rgba(255, 255, 255, 0.418);
+    width: 80%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 4px;
+    padding: 16px;
+    max-width: 380px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    text-align: center;
+
+}
+#portada-descripcion h2{
+    margin-bottom: 16px;
+}
+#proyectos{
+    margin-top: 140px;
+    padding-top: 40px;
+    padding-bottom: 140px;
+    background-color: #dbfeff;
+
+}
+#proyectos-titulo{
+    max-width: 830px;
+    text-align: justify;
+    margin: 0 auto;
+}
+#proyectos h2{
+    margin-left: 24px;
+    margin-bottom: 80px;
+
+}
+.card-proyectos{
+    width: 70%;
+    max-width: 580px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 0 20px rgb(165, 162, 162), 0 0 10px rgb(165, 162, 162);
+    border-radius: 20px;
+}
+.card-descripcion{
+    padding: 16px;
+    text-align: justify;
+}
+.card-descripcion h3{
+    margin-bottom: 20px;
+}
+.card-proyectos img{
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+    object-fit: cover;
+}
+#equipo{
+    padding-top: 40px;
+    padding-bottom: 140px;
+}
+#equipo-titulo{
+    margin: 0 auto;
+    max-width: 830px;
+    text-align: justify;
+}
+#equipo h2{
+    margin-left: 24px;
+    margin-bottom: 20px;
+}
+#equipo p{
+    margin: 0px 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid black;
+}
+#cards-equipo-todos{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    padding-right: 20px;
+    scroll-snap-type: x;
+}
+
+.card-equipo{
+    width: 260px;
+    height: 380px;
+    margin: 0 auto;
+    margin: 20px 0 20px 20px;
+    background-color: white;
+    box-shadow: 0 0 20px rgb(165, 162, 162), 0 0 10px rgb(165, 162, 162);
+    border-radius: 20px;
+    position: relative;
+}
+.card-equipo img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.equipo-descripcion{
+    position: absolute;
+    top: 0;
+    background-color: black;
+    opacity: 0.3;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    z-index: 2;
+
+}
+.text-descripcion{
+    position: absolute;
+    bottom: 0;
+    color: white;
+    padding: 16px;
+    z-index: 3;
+
+}
+.text-descripcion h3{
+    font-size: 2.5rem;
+}
+.text-descripcion h4{
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid white;
+}
+footer{
+    background-color: #dbfeff;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+.logo-footer{
+    height: 60px;
+
+}
+.logo-footer img{
+    height: 100%;
+}
+@media(min-width: 1200px){
+    #portada-descripcion{
+        max-height: 160px;
+        max-width: 700px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        font-size: 2rem;
+    }
+    #equipo-titulo{
+        max-width: 830px;
+    }
+    #cards-equipo-todos{
+        padding-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-right: 20px;
+        max-width: 860px;
+        margin: 0 auto;
+        overflow-x: hidden;
+    }
+}

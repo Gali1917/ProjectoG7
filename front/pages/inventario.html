@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/style-inventario.css">
+    <link rel="shortcut icon" href="../assets/images/logoS.png">
+
+
+</head>
+
+<body>
+    <header>
+        <div id="header" class="sombreado">
+
+            <div id="logo">
+                <span>Tu tienda Online</span>
+                <a href="../index.html">    
+                    <img src="../assets/images/logoS.png" alt="Logo">
+                </a>
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <aside id="aside-inventario" class="text-center">
+            <ul>
+                <li>
+                    <h2>Control de inventario</h2>
+                    
+                </li>
+                <li>
+                    <h3 onClick="damas()">Damas</h3>
+                    <ul id="menu-aside-dama">
+                        <li>Prendas superiores</li>
+                        <li>Prendas inferiores</li>
+                        <li>Conjuntos</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3 onClick="caballeros()">Caballeros</h3>
+                    <ul id="menu-aside-caballero">
+                        <li>Prendas superiores</li>
+                        <li>Prendas inferiores</li>
+                        <li>Conjuntos</li>
+                    </ul>
+                </li>
+            </ul>
+        </aside>
+        <section id="section">
+            <div id="navbar">
+                <div class="max-screen">
+                    <form class="d-flex" role="search">
+                        <input id="busqueda-inventario" type="search" placeholder="Buscar...">
+                        <img class="btn-navbar" src="../assets/images/search.png" alt="Buscar" onClick="search()">
+                    </form>         
+                    <img class="btn-navbar" src="../assets/images/info.png" alt="Informacion">
+                </div>
+            </div>
+            <article id="article-inventario">
+                <div class="tabla">
+                    <table id="tabla">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Talla</th>
+                                <th>Genero</th>
+                                <th>Precio</th>
+                                <th>Marca</th>
+                                <th>Detalle</th>
+                                <th>Cantidad</th>
+                                <th></th>
+                            </tr>
+                            
+                        </thead>
+                        <tr class="item">
+                            <td>1</td>
+                            <td>Pantalon</td>
+                            <td>28</td>
+                            <td>Dama</td>
+                            <td>$59.999</td>
+                            <td>Adidas</td>
+                            <td>Info...</td>
+                            <td>5</td>
+                            <td>
+                                <figure id="figure">
+                                    <img src="../assets/images/trash.png" alt="Quitar producto">
+                                    <img src="../assets/images/editar.png" alt="Editar">
+                                </figure>
+                            </td>
+                        </tr>
+                        <tr class="item">
+                            <td>2</td>
+                            <td>Camiseta</td>
+                            <td>M</td>
+                            <td>Caballero</td>
+                            <td>$39.999</td>
+                            <td>Nike</td>
+                            <td>Info...</td>
+                            <td>5</td>
+                            <td>
+                                <figure id="figure">
+                                    <img src="../assets/images/trash.png" alt="Quitar producto">
+                                    <img src="../assets/images/editar.png" alt="Editar">
+                                </figure>
+                            </td>
+                        </tr>
+                        <tr class="item">
+                            <td>3</td>
+                            <td>Vestido</td>
+                            <td>M</td>
+                            <td>Dama</td>
+                            <td>$229.999</td>
+                            <td>Pollito</td>
+                            <td>Info...</td>
+                            <td>5</td>
+                            <td>
+                                <figure id="figure">
+                                    <img src="../assets/images/trash.png" alt="Quitar producto">
+                                    <img src="../assets/images/editar.png" alt="Editar">
+                                </figure>
+                            </td>
+                        </tr>
+                        <tr class="item">
+                            <td>4</td>
+                            <td>Pantalon</td>
+                            <td>28</td>
+                            <td>Dama</td>
+                            <td>$59.999</td>
+                            <td>Adidas</td>
+                            <td>Info...</td>
+                            <td>15</td>
+                            <td>
+                                <figure id="figure">
+                                    <img src="../assets/images/trash.png" alt="Quitar producto">
+                                    <img src="../assets/images/editar.png" alt="Editar">
+                                </figure>
+                            </td>
+                        </tr>
+                        <tr class="item">
+                            <td>5</td>
+                            <td>Falda</td>
+                            <td>28</td>
+                            <td>Dama</td>
+                            <td>$99.999</td>
+                            <td>Adidas</td>
+                            <td>Info...</td>
+                            <td>7</td>
+                            <td>
+                                <figure id="figure">
+                                    <img src="../assets/images/trash.png" alt="Quitar producto">
+                                    <img src="../assets/images/editar.png" alt="Editar">
+                                </figure>
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+                
+            </article>
+            <div id="paginacion">
+                <div>
+                    <img src="../assets/images/anterior.png" alt="">
+                    <p>1, 2, 3, 4, 5, 6, 7</p>
+                    <img src="../assets/images/proximo.png" alt="">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <div class="container-fluid">
+            <div class="row align-items-center ">
+                <div class="col ">
+                    <img src="../assets/images/logoS.png" alt="logo">
+                </div>
+                <div class="col">
+                    <ul class="text-center m-2">
+                        <li>
+                            <a href="../index.html">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="./nosotros/index.html">Nosotros</a>
+                        </li>
+                        <li>
+                            <a href="#">Contactenos</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col align-self-end text-end">
+                    <p class="mb-1">Grupo 7 UTP 2022</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+        integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous">
+    </script>
+    <script src="../index.js"></script>
+    <script src="../app/inventario.js"></script>
+</body>
+
+</html>
