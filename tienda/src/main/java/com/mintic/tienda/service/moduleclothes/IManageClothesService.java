@@ -3,18 +3,15 @@ package com.mintic.tienda.service.moduleclothes;
 import java.util.List;
 
 import com.mintic.tienda.domain.moduleclothes.IManageClothesDomain;
-import com.mintic.tienda.entity.Prenda;
 import com.mintic.tienda.service.DTO.PrendaDTO;
 
 public interface IManageClothesService extends IManageClothesDomain {
     
-   Prenda savePrenda(Prenda prenda);
+   PrendaDTO savePrenda(PrendaDTO prendaDTO);
 
-   List<Prenda> getAllPrendas();
+   List<PrendaDTO> getAllPrendas();
 
-   Prenda getOnePrenda(Long idPrenda);
-
-   Prenda updatePrenda(Prenda prenda);
+   PrendaDTO getOnePrenda(Long idPrenda);
 
    void deletePrendaById(Long idPrenda);
 }
