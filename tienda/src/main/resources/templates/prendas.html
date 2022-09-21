@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Home</title>
+</head>
+<body>
+   
+    <table>
+     
+        <tr th:each="prenda : ${prendas}">
+            <td th:text="${prenda.idPrenda}" ></td>
+            <td th:text="${prenda.nombre}" ></td>
+            <td th:text="${prenda.idTalla}" ></td>
+            <td th:text="${prenda.idTipoPrenda}" ></td>
+            <td th:text="${prenda.idGenero}" ></td>
+            <td th:text="${prenda.precio}" ></td>
+            <td th:text="${prenda.idMarca}" ></td>
+            <td th:text="${prenda.detalle}" ></td>
+            <td th:text="${prenda.cantidad}" ></td>
+            <td th:text="${prenda.imagen}" ></td>
+        </tr>
+     
+    </table>
+
+</body>
+</html>
