@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.mintic.tienda.domain.moduleclothes.impl.ManageClothesDomainImpl;
 import com.mintic.tienda.entity.Cliente;
 import com.mintic.tienda.repository.IClienteRepo;
 
@@ -14,6 +15,9 @@ public class DemoController {
     
     @Autowired
     private IClienteRepo clienteRepo;
+
+    @Autowired
+    private ManageClothesDomainImpl manageClothesDomainImpl;
 
     @GetMapping("/home")
     public String home(@RequestParam(name="name", required=false, defaultValue="xName") String name, Model model) {
@@ -25,14 +29,14 @@ public class DemoController {
 
         clienteRepo.save(cliente);
 
-        model.addAttribute("name", name);
+        model.addAttribute("name", "Esneider");
         return "home";
     }
 
     //Lista de clientes en DB
     @GetMapping("/clientes")
     public String prendas(Model model) {
-        model.addAttribute("clientes", clienteRepo.findAll());
+        model.addAttribute("people", clienteRepo.findAll());
         return "clientes";
     }
 }
