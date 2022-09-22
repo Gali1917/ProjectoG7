@@ -6,5 +6,5 @@ import com.mintic.tienda.entity.Prenda;
 
 @Repository
 public interface IPrendaRepo extends JpaRepository<Prenda, Long>{
-    
+
 }

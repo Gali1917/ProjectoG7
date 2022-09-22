@@ -63,4 +63,24 @@ public class DemoController {
     public String nosotros(Model model){
         return "/pages/nosotros/index";
     }
+
+    @GetMapping("/editar")
+    public String editar(Model model){
+        return "formulario_editar";
+    }
+
+    @GetMapping("/crear")
+    public String crear(Model model){
+        return "formulario";
+    }
+
+    @GetMapping("/man")
+    public String man(Model model){
+        return "man";
+    }
+
+    @GetMapping("/woman")
+    public String woman(Model model){
+        return "woman";
+    }
 }

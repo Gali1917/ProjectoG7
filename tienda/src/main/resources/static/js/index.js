@@ -31,12 +31,12 @@ function desplegarMenu(){
 }
 
 function iniciarSesion(){
-    const inputEmail = document.getElementById("input-email");
+    const inputEmail = document.getElementById("input-usuario");
     const inputPassword = document.getElementById("input-password");
     if(inputEmail.value == "admin"){
         // history.go(-1);
         
-        location.href = "@{/inventario.html}";
+        location.href = "/inventario";
         document.getElementById("boton-inventario").style.display = "block";
     }
     else{

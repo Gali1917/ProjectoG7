@@ -210,7 +210,9 @@ aside a{
     transform: skew(-10deg, 0deg);
 
 }
-
+.back-damas a{
+    text-decoration: none;
+}
 #sub-categorias-damas{
     width: 50%;
     position: relative;
@@ -249,6 +251,9 @@ aside a{
     text-align: center;
     transform: skew(-10deg, 0deg);
 
+}
+.back-caballeros a{
+    text-decoration: none;
 }
 #cat-caballeros h5{
     padding: 0 12px;

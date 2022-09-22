@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="es">
+<html xmlns:th="http://www.thymeleaf.org">
+
 
 <head>
   <title>Tu Tienda Online</title>
@@ -11,9 +12,9 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
     integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="../styles/styles.css">
-    <link rel="stylesheet" href="../styles/styles_man.css">
-    <link rel="shortcut icon" href="../assets/images/logoS.png">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styles_man.css">
+    <link rel="shortcut icon" href="https://i.postimg.cc/7Lh51TG8/logoS.png">
 
 </head>
 
@@ -21,12 +22,12 @@
     <header>
         <div id="header" class="sombreado">
             <div id="menu">
-                <img onClick="desplegarMenu()" src="../assets/images/menu.png" alt="Menu">
+                <img onClick="desplegarMenu()" src="https://i.postimg.cc/Y0cTRCY3/menu.png" alt="Menu">
             </div>
             <div id="logo">
                 <span>Tu tienda Online</span>
-                <a href="../index.html">
-                    <img src="../assets/images/logoS.png" alt="Logo">
+                <a th:href="@{/}">
+                    <img src="https://i.postimg.cc/7Lh51TG8/logoS.png" alt="Logo">
 
                 </a>
             </div>
@@ -38,13 +39,13 @@
                 </a>
                 <form class="d-flex" role="search">
                     <input id="busqueda" type="search" placeholder="Buscar...">
-                    <img class="btn-navbar" src="../assets/images/search.png" alt="Buscar">
+                    <img class="btn-navbar" src="https://i.postimg.cc/yd3w0Zgx/search.png" alt="Buscar">
                 </form>                    
-                <a href="../pages/login.html">
-                    <img class="btn-navbar" src="../assets/images/login.png" alt="Login">
+                <a th:href="@{/}">
+                    <img class="btn-navbar" src="https://i.postimg.cc/sgVdbx8H/login.png" alt="Login">
                 </a>    
-                <a href="./nosotros/index.html">
-                    <img class="btn-navbar" src="../assets/images/info.png" alt="Informacion">
+                <a th:href="@{/nosotros}">
+                    <img class="btn-navbar" src="https://i.postimg.cc/qMcHmymC/info.png" alt="Informacion">
                 </a>
             </div>
         </div>
@@ -57,7 +58,7 @@
                             <h5>Prendas Superiores</h5>
                             <h5>Prendas Inferiores</h5>
                             <h5>Conjuntos</h5>
-                            <a href="./woman.html">
+                            <a th:href="@{/woman}">
                                 <h5>Todo</h5>
                             </a>
                         </div>
@@ -70,7 +71,7 @@
                             <h5>Prendas Superiores</h5>
                             <h5>Prendas Inferiores</h5>
                             <h5>Conjuntos</h5>
-                            <a href="./man.html">
+                            <a th:href="@{/man}">
                                 <h5>Todo</h5>
                             </a>
                         </div>
@@ -83,10 +84,10 @@
         <section id="aside-menu">
             <ul>
                 <li>
-                    <a href="./login.html">Iniciar Sesion</a>
+                    <a th:href="@{/login}">Iniciar Sesion</a>
                 </li>
                 <li>
-                    <a href="./nosotros/index.html">Nosotros</a>
+                    <a th:href="@{/nosotros}">Nosotros</a>
                 </li>
                 <li>
                     <a href="/">Contactenos</a>
@@ -106,7 +107,7 @@
                         <h3 id="prendas-superiores-caballeros"class="titulo-inactivo" onClick="listarPrendasSuperioresCaballeros()">Prendas Superiores</h3>
                         <h3 id="prendas-inferiores-caballeros"class="titulo-inactivo" onClick="listarPrendasInferioresCaballeros()">Prendas Inferiores</h3>
                         <h3 id="conjuntos-caballeros"class="titulo-inactivo" onClick="listarConjuntosCaballeros()">Conjuntos</h3>
-                        <img src="../assets/images/back.png" onClick="btnAtras()" alt="Atras">
+                        <img src="https://i.postimg.cc/3JTPDWKr/back.png" onClick="btnAtras()" alt="Atras">
                     </div>
                 </div>
                 <div class="row" id="section-categorias">
@@ -116,7 +117,7 @@
                                 <button class="btn-card sombreado" onClick="desplegarTodoMan()">Todo</button>
                             </div>
                             <div class="img-cards sombreado">
-                                <img src="../assets/images/ellas.jpg" alt="Damas">
+                                <img src="https://i.postimg.cc/x1qfsYCz/ellos.jpg" alt="Ellos">
                             </div>
                         </div>
                     </div>
@@ -126,7 +127,7 @@
                                 <button class="btn-card sombreado">Prendas Superiores</button>
                             </div>
                             <div class="img-cards sombreado">
-                                <img src="../assets/images/ellos.jpg" alt="Damas">
+                                <img src="https://i.postimg.cc/JnW1mJpZ/prendas-superiores-hombre.jpg" alt="Damas">
                             </div>
                         </div>
                     </div>
@@ -136,7 +137,7 @@
                                 <button class="btn-card sombreado">Prendas Inferiores</button>
                             </div>
                             <div class="img-cards sombreado">
-                                <img src="../assets/images/ellas.jpg" alt="Damas">
+                                <img src="https://i.postimg.cc/brm8Q5p9/prendas-inferiores.jpg" alt="Damas">
                             </div>
                         </div>
                     </div>
@@ -146,7 +147,7 @@
                                 <button class="btn-card sombreado">Conjuntos</button>
                             </div>
                             <div class="img-cards sombreado">
-                                <img src="../assets/images/ellos.jpg" alt="Damas">
+                                <img src="https://i.postimg.cc/VsgYQJn0/conjuntos-hombre.jpg" alt="Damas">
                             </div>
                         </div>
                     </div>
@@ -155,120 +156,70 @@
                     <div class="col-12 col-md-4 col-xl-3 mb-5">
                         <div class="card-categoria sombreado">
                             <div class="btn-categoria">
-                                <button class="btn-card sombreado">$99.999</button>
+                                <button class="btn-card sombreado">$36.000</button>
                             </div>
                             <div class="img-cards sombreado">
-                                <img src="../assets/images/ellas.jpg" alt="Damas">
+                                <img src="https://i.postimg.cc/1RYzhfqz/13.jpg" alt="Damas">
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-md-4 col-xl-3 mb-5">
                         <div class="card-categoria sombreado">
                             <div class="btn-categoria">
-                                <button class="btn-card sombreado">$49.999</button>
+                                <button class="btn-card sombreado">$110.000</button>
                             </div>
                             <div class="img-cards sombreado">
-                                <img src="../assets/images/ellos.jpg" alt="Damas">
+                                <img src="https://i.postimg.cc/5t14qzZs/15.jpg" alt="Damas">
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-md-4 col-xl-3 mb-5">
                         <div class="card-categoria sombreado">
                             <div class="btn-categoria">
-                                <button class="btn-card sombreado">$99.999</button>
+                                <button class="btn-card sombreado">$30.000</button>
                             </div>
                             <div class="img-cards sombreado">
-                                <img src="../assets/images/ellas.jpg" alt="Damas">
+                                <img src="https://i.postimg.cc/85zTxSkW/2.jpg" alt="Damas">
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-md-4 col-xl-3 mb-5">
                         <div class="card-categoria sombreado">
                             <div class="btn-categoria">
-                                <button class="btn-card sombreado">$49.999</button>
+                                <button class="btn-card sombreado">$59.000</button>
                             </div>
                             <div class="img-cards sombreado">
-                                <img src="../assets/images/ellos.jpg" alt="Damas">
+                                <img src="https://i.postimg.cc/wMSHtRXc/3.jpg" alt="Damas">
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-md-4 col-xl-3 mb-5">
                         <div class="card-categoria sombreado">
                             <div class="btn-categoria">
-                                <button class="btn-card sombreado">$99.999</button>
+                                <button class="btn-card sombreado">35.000</button>
                             </div>
                             <div class="img-cards sombreado">
-                                <img src="../assets/images/ellas.jpg" alt="Damas">
+                                <img src="https://i.postimg.cc/8k3TX92J/6.jpg" alt="Damas">
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-md-4 col-xl-3 mb-5">
                         <div class="card-categoria sombreado">
                             <div class="btn-categoria">
-                                <button class="btn-card sombreado">$49.999</button>
+                                <button class="btn-card sombreado">$46.000</button>
                             </div>
                             <div class="img-cards sombreado">
-                                <img src="../assets/images/ellos.jpg" alt="Damas">
+                                <img src="https://i.postimg.cc/RFpvBDqY/7.jpg" alt="Damas">
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-md-4 col-xl-3 mb-5">
                         <div class="card-categoria sombreado">
                             <div class="btn-categoria">
-                                <button class="btn-card sombreado">$99.999</button>
+                                <button class="btn-card sombreado">$110.000</button>
                             </div>
                             <div class="img-cards sombreado">
-                                <img src="../assets/images/ellas.jpg" alt="Damas">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4 col-xl-3 mb-5">
-                        <div class="card-categoria sombreado">
-                            <div class="btn-categoria">
-                                <button class="btn-card sombreado">$49.999</button>
-                            </div>
-                            <div class="img-cards sombreado">
-                                <img src="../assets/images/ellos.jpg" alt="Damas">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4 col-xl-3 mb-5">
-                        <div class="card-categoria sombreado">
-                            <div class="btn-categoria">
-                                <button class="btn-card sombreado">$99.999</button>
-                            </div>
-                            <div class="img-cards sombreado">
-                                <img src="../assets/images/ellas.jpg" alt="Damas">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4 col-xl-3 mb-5">
-                        <div class="card-categoria sombreado">
-                            <div class="btn-categoria">
-                                <button class="btn-card sombreado">$49.999</button>
-                            </div>
-                            <div class="img-cards sombreado">
-                                <img src="../assets/images/ellos.jpg" alt="Damas">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4 col-xl-3 mb-5">
-                        <div class="card-categoria sombreado">
-                            <div class="btn-categoria">
-                                <button class="btn-card sombreado">$99.999</button>
-                            </div>
-                            <div class="img-cards sombreado">
-                                <img src="../assets/images/ellas.jpg" alt="Damas">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4 col-xl-3 mb-5">
-                        <div class="card-categoria sombreado">
-                            <div class="btn-categoria">
-                                <button class="btn-card sombreado">$49.999</button>
-                            </div>
-                            <div class="img-cards sombreado">
-                                <img src="../assets/images/ellos.jpg" alt="Damas">
+                                <img src="https://i.postimg.cc/x8qTNSWY/9.jpg" alt="Damas">
                             </div>
                         </div>
                     </div>
@@ -280,15 +231,15 @@
         <div class="container-fluid">
             <div class="row align-items-center ">
                 <div class="col ">
-                    <img src="../assets/images/logoS.png" alt="logo">
+                    <img src="https://i.postimg.cc/7Lh51TG8/logoS.png" alt="logo">
                 </div>
                 <div class="col">
                     <ul class="text-center m-2">
                         <li>
-                            <a href="../index.html">Inicio</a>
+                            <a th:href="@{/}">Inicio</a>
                         </li>
                         <li>
-                            <a href="./nosotros/index.html">Nosotros</a>
+                            <a hth:href="@{/nosotros}">Nosotros</a>
                         </li>
                         <li>
                             <a href="#">Contactenos</a>
@@ -303,9 +254,9 @@
     </footer>
         <!-- place footer here -->
     </footer>
-    <script src="../app/start.js"></script>
+    <script src="./js/start.js"></script>
 
-    <script src="../index.js"></script>
+    <script src="./js/index.js"></script>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
         integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">

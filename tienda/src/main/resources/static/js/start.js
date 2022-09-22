@@ -7,7 +7,7 @@ function desplegarTodoInicio(){
     <div id="nueva-card" class="col-4 col-xl-3 mb-5">
         <div class="card-categoria sombreado">
             <div class="btn-categoria">
-                <button class="btn-card sombreado">$${precio}</button>
+                <button class="btn-card sombreado">${precio}</button>
             </div>
             <div class="img-cards sombreado">
                 <img src=${url} alt="Producto">
@@ -26,7 +26,7 @@ function desplegarTodoCaballeros(){
     <div id="nueva-card" class="col-4 col-xl-3 mb-5">
         <div class="card-categoria sombreado">
             <div class="btn-categoria">
-                <button class="btn-card sombreado">$${precio}</button>
+                <button class="btn-card sombreado">${precio}</button>
             </div>
             <div class="img-cards sombreado">
                 <img src=${url} alt="Producto">
@@ -45,7 +45,7 @@ function desplegarTodoDamas(){
     <div id="nueva-card" class="col-4 col-xl-3 mb-5">
         <div class="card-categoria sombreado">
             <div class="btn-categoria">
-                <button class="btn-card sombreado">$${precio}</button>
+                <button class="btn-card sombreado">${precio}</button>
             </div>
             <div class="img-cards sombreado">
                 <img src=${url} alt="Producto">

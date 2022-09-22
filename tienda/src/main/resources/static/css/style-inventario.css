@@ -95,6 +95,7 @@ aside ul{
 aside ul li{
     list-style: none;
     padding-left: 0;
+    cursor: pointer;
 }
 
 #menu-aside-dama{
@@ -102,6 +103,21 @@ aside ul li{
 }
 #menu-aside-caballero{
     display: none;
+}
+.agregar-producto{
+    height: 100%;
+    position: relative;
+}
+.agregar-producto li:nth-child(4){
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.agregar-producto a{
+    text-decoration: none;
+    color: var(--c1);
 }
 #section{
     background-color: rgba(0, 0, 0, 0.349);
@@ -153,10 +169,14 @@ aside ul li{
     position: sticky;
     top: 20;
 }
+#article-inventario{
+    padding-bottom: 100px;
+}
 #tabla{
     background-color: #F7DC5F;
     width: 100%;
 }
+
 .tabla tr{
     display: grid;
     grid-template-columns: repeat(11, minmax(0, 1fr));
