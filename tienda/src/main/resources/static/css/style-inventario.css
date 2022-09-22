@@ -23,6 +23,7 @@ body{
     position: relative;
     min-width: 375px;
     min-height: calc(100vh - 100px);    
+    height: 100%;
 }
 .sombreado{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
@@ -158,7 +159,7 @@ aside ul li{
 }
 .tabla tr{
     display: grid;
-    grid-template-columns: repeat(9, minmax(0, 1fr));
+    grid-template-columns: repeat(11, minmax(0, 1fr));
 }
 .tabla th, .tabla td{
     /* border: 1px solid var(--c5); */
@@ -168,6 +169,7 @@ aside ul li{
     justify-content: space-between;
     background-color: var(--c1);
     padding: 8px;
+    min-height: 90px;
 }
 .item p{
     margin: 0;
@@ -208,9 +210,9 @@ aside ul li{
 #footer{
     background-color: var(--c5);
     font-size: 14px;
-    position: absolute;
+    position:fixed;
     width: 100%;
-    bottom: -10px;
+    bottom: 0;
 }
 #footer img{
     width: 50px;

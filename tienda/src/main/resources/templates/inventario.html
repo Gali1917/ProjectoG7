@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+
 
 <head>
     <title>Title</title>
@@ -10,9 +11,12 @@
     <!-- Bootstrap CSS v5.2.0-beta1 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
     integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel="stylesheet" href="../styles/style-inventario.css">
-    <link rel="shortcut icon" href="../assets/images/logoS.png">
+    <!-- <link rel="stylesheet" href="../styles/style-inventario.css">
+    <link rel="shortcut icon" href="../assets/images/logoS.png"> -->
+    <link rel="stylesheet" th:href="@{/css/style-inventario.css}">
 
+
+    <link rel="shortcut icon" href="../assets/images/logoS.png">
 
 </head>
 
@@ -22,8 +26,8 @@
 
             <div id="logo">
                 <span>Tu tienda Online</span>
-                <a href="../index.html">    
-                    <img src="../assets/images/logoS.png" alt="Logo">
+                <a th:href="@{/}">    
+                    <img src="./images/logoS.png" alt="Logo">
                 </a>
             </div>
         </div>
@@ -59,9 +63,9 @@
                 <div class="max-screen">
                     <form class="d-flex" role="search">
                         <input id="busqueda-inventario" type="search" placeholder="Buscar...">
-                        <img class="btn-navbar" src="../assets/images/search.png" alt="Buscar" onClick="search()">
+                        <img class="btn-navbar" src="./images/search.png" alt="Buscar" onClick="search()">
                     </form>         
-                    <img class="btn-navbar" src="../assets/images/info.png" alt="Informacion">
+                    <img class="btn-navbar" src="./images/info.png" alt="Informacion">
                 </div>
             </div>
             <article id="article-inventario">
@@ -72,92 +76,31 @@
                                 <th>ID</th>
                                 <th>Nombre</th>
                                 <th>Talla</th>
+                                <th>Tipo</th>
                                 <th>Genero</th>
                                 <th>Precio</th>
                                 <th>Marca</th>
                                 <th>Detalle</th>
                                 <th>Cantidad</th>
-                                <th></th>
-                            </tr>
-                            
+                                <th>imagen</th>
+                            </tr>    
                         </thead>
-                        <tr class="item">
-                            <td>1</td>
-                            <td>Pantalon</td>
-                            <td>28</td>
-                            <td>Dama</td>
-                            <td>$59.999</td>
-                            <td>Adidas</td>
-                            <td>Info...</td>
-                            <td>5</td>
+                        <tr class="item" th:each="prenda : ${inventario}">
+                            <td th:text="${prenda.idPrenda}" ></td>
+                            <td th:text="${prenda.nombre}" ></td>
+                            <td th:text="${prenda.idTalla}" ></td>
+                            <td th:text="${prenda.idTipoPrenda}" ></td>
+                            <td th:text="${prenda.idGenero}" ></td>
+                            <td th:text="${prenda.precio}" ></td>
+                            <td th:text="${prenda.idMarca}" ></td>
+                            <td th:text="${prenda.detalle}" ></td>
+                            <td th:text="${prenda.cantidad}" ></td>
+                            <td th:text="${prenda.imagen}" ></td>
                             <td>
                                 <figure id="figure">
-                                    <img src="../assets/images/trash.png" alt="Quitar producto">
-                                    <img src="../assets/images/editar.png" alt="Editar">
-                                </figure>
-                            </td>
-                        </tr>
-                        <tr class="item">
-                            <td>2</td>
-                            <td>Camiseta</td>
-                            <td>M</td>
-                            <td>Caballero</td>
-                            <td>$39.999</td>
-                            <td>Nike</td>
-                            <td>Info...</td>
-                            <td>5</td>
-                            <td>
-                                <figure id="figure">
-                                    <img src="../assets/images/trash.png" alt="Quitar producto">
-                                    <img src="../assets/images/editar.png" alt="Editar">
-                                </figure>
-                            </td>
-                        </tr>
-                        <tr class="item">
-                            <td>3</td>
-                            <td>Vestido</td>
-                            <td>M</td>
-                            <td>Dama</td>
-                            <td>$229.999</td>
-                            <td>Pollito</td>
-                            <td>Info...</td>
-                            <td>5</td>
-                            <td>
-                                <figure id="figure">
-                                    <img src="../assets/images/trash.png" alt="Quitar producto">
-                                    <img src="../assets/images/editar.png" alt="Editar">
-                                </figure>
-                            </td>
-                        </tr>
-                        <tr class="item">
-                            <td>4</td>
-                            <td>Pantalon</td>
-                            <td>28</td>
-                            <td>Dama</td>
-                            <td>$59.999</td>
-                            <td>Adidas</td>
-                            <td>Info...</td>
-                            <td>15</td>
-                            <td>
-                                <figure id="figure">
-                                    <img src="../assets/images/trash.png" alt="Quitar producto">
-                                    <img src="../assets/images/editar.png" alt="Editar">
-                                </figure>
-                            </td>
-                        </tr>
-                        <tr class="item">
-                            <td>5</td>
-                            <td>Falda</td>
-                            <td>28</td>
-                            <td>Dama</td>
-                            <td>$99.999</td>
-                            <td>Adidas</td>
-                            <td>Info...</td>
-                            <td>7</td>
-                            <td>
-                                <figure id="figure">
-                                    <img src="../assets/images/trash.png" alt="Quitar producto">
-                                    <img src="../assets/images/editar.png" alt="Editar">
+                                    <img src="./images/trash.png" alt="Quitar producto">
+                                    
+                                    <img src="./images/editar.png" alt="Editar">
                                 </figure>
                             </td>
                         </tr>
@@ -166,13 +109,13 @@
                 </div>
                 
             </article>
-            <div id="paginacion">
+            <!-- <div id="paginacion">
                 <div>
                     <img src="../assets/images/anterior.png" alt="">
                     <p>1, 2, 3, 4, 5, 6, 7</p>
                     <img src="../assets/images/proximo.png" alt="">
                 </div>
-            </div>
+            </div> -->
         </section>
     </main>
     <footer id="footer">
@@ -209,7 +152,7 @@
         integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous">
     </script>
     <script src="../index.js"></script>
-    <script src="../app/inventario.js"></script>
+    <script src="./js/inventario.js"></script>
 </body>
 
 </html>
