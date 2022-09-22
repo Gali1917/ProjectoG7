@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="es">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grupo 07 UTP</title>
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="shortcut icon" href="./assets/images/logo.png">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="shortcut icon" href="./images/images/logo.png">
 
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="./assets/images/logo.png" alt="Logo">
+            <img src="./images/images/logo.png" alt="Logo">
         </div>
         <nav>
             <ul>
@@ -24,7 +24,7 @@
     <main>
         <section id="portada">
             <article id="portada-background">
-                <video autoplay loop src="./assets/video/Particle1920p.mp4" ></video>
+                <video autoplay loop src="./video/Particle1920p.mp4" ></video>
             </article>
             <article id="portada-descripcion">
                 <h2>Somos desarroladores en crecimiento</h2>
@@ -41,8 +41,8 @@
                         <h3>Tu Moda Online</h3>
                         <p>Tienda de ropa en linea donde podras ver los diferentes productos disponibles. El software permite al administrador llevar un inventario donde podra modificarlo.</p>
                     </div>
-                    <a href="../../index.html">
-                        <img src="./assets/images/imagenModaOnline.png" alt="Tu Moda Online">
+                    <a th:href="@{/}">
+                        <img src="./images/images/imagenModaOnline.png" alt="Tu Moda Online">
                     </a>
                 </div>
             </article>
@@ -55,7 +55,7 @@
             <div id="cards-equipo-todos">
                 <article id="article-equipo">
                     <div class="card-equipo">
-                        <img src="./assets/images/carlosGaleano.jfif" alt="Miembro del equipo">
+                        <img src="./images/images/carlosGaleano.jfif" alt="Miembro del equipo">
                         <div class="equipo-descripcion">
                         </div>
                         <div class="text-descripcion">
@@ -67,7 +67,7 @@
                 </article>
                 <article id="article-equipo">
                     <div class="card-equipo">
-                        <img src="./assets/images/anonymous.jpg" alt="Miembro del equipo">
+                        <img src="./images/images/anonymous.jpg" alt="Miembro del equipo">
                         <div class="equipo-descripcion">
                         </div>
                         <div class="text-descripcion">
@@ -79,7 +79,7 @@
                 </article>
                 <article id="article-equipo">
                     <div class="card-equipo">
-                        <img src="./assets/images/anonymous.jpg" alt="Miembro del equipo">
+                        <img src="./images/images/anonymous.jpg" alt="Miembro del equipo">
                         <div class="equipo-descripcion">
                         </div>
                         <div class="text-descripcion">
@@ -91,7 +91,7 @@
                 </article>
                 <article id="article-equipo">
                     <div class="card-equipo">
-                        <img src="./assets/images/anonymous.jpg" alt="Miembro del equipo">
+                        <img src="./images/images/anonymous.jpg" alt="Miembro del equipo">
                         <div class="equipo-descripcion">
                         </div>
                         <div class="text-descripcion">
@@ -103,7 +103,7 @@
                 </article>
                 <article id="article-equipo">
                     <div class="card-equipo">
-                        <img src="./assets/images/anonymous.jpg" alt="Miembro del equipo">
+                        <img src="./images/images/anonymous.jpg" alt="Miembro del equipo">
                         <div class="equipo-descripcion">
                         </div>
                         <div class="text-descripcion">
@@ -119,7 +119,7 @@
     </main>
     <footer>
         <div class="logo-footer">
-            <img src="./assets/images/logo.png" alt="Logo">
+            <img src="./images/images/logo.png" alt="Logo">
         </div>
     </footer>
         

@@ -35,7 +35,8 @@ function iniciarSesion(){
     const inputPassword = document.getElementById("input-password");
     if(inputEmail.value == "admin"){
         // history.go(-1);
-        location.href = "./inventario.html";
+        
+        location.href = "@{/inventario.html}";
         document.getElementById("boton-inventario").style.display = "block";
     }
     else{

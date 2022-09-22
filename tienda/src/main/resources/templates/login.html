@@ -11,9 +11,9 @@
     <!-- Bootstrap CSS v5.2.0-beta1 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel="stylesheet" href="../styles/styles.css">
-    <link rel="stylesheet" href="../styles/styles_login.css">
-    <link rel="shortcut icon" href="../assets/images/logoS.png">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styles_login.css">
+    <link rel="shortcut icon" href="./images/logoS.png">
 
 
 </head>
@@ -21,12 +21,12 @@
     <header>
         <div id="header" class="sombreado"> 
             <div id="menu">
-                <img onClick="desplegarMenu()" src="../assets/images/menu.png" alt="Menu">
+                <img onClick="desplegarMenu()" src="./images/menu.png" alt="Menu">
             </div>
             <div id="logo">
                 <span>Tu tienda Online</span>
-                <a href="../index.html">
-                    <img src="../assets/images/logoS.png" alt="Logo">
+                <a th:href="@{/}">
+                    <img src="./images/logoS.png" alt="Logo">
                 </a>
             </div>
         </div>
@@ -37,13 +37,13 @@
                 </a>
                 <form class="d-flex" role="search">
                     <input id="busqueda" type="search" placeholder="Buscar...">
-                    <img class="btn-navbar" src="../assets/images/search.png" alt="Buscar">
+                    <img class="btn-navbar" src="./images/search.png" alt="Buscar">
                 </form>                    
                 <a href="./login.html">
-                    <img class="btn-navbar" src="../assets/images/login.png" alt="Login">
+                    <img class="btn-navbar" src="./images/login.png" alt="Login">
                 </a>
                 <a href="./nosotros/index.html">
-                    <img class="btn-navbar" src="../assets/images/info.png" alt="Informacion">
+                    <img class="btn-navbar" src="./images/info.png" alt="Informacion">
                 </a>
             </div>
         </div>
@@ -82,10 +82,10 @@
         <section id="aside-menu">
             <ul>
                 <li>
-                    <a href="../pages/login.html">Iniciar Sesion</a>
+                    <a th:href="@{/login}">Iniciar Sesion</a>
                 </li>
                 <li>
-                    <a href="./nosotros/index.html">Nosotros</a>
+                    <a th:href="@{/nosotros}">Nosotros</a>
                 </li>
                 <li>
                     <a href="/">Contactenos</a>
@@ -96,7 +96,7 @@
     <main>
         <div id="login">
             <div onClick="history.go(-1);">
-                <img class="cerrar" src="../assets/images/cerrar.png" alt="Cerrar">           
+                <img class="cerrar" src="./images/cerrar.png" alt="Cerrar">           
             </div>
 
             <h3>Iniciar Sesion</h3>
@@ -119,7 +119,7 @@
         <div id="registro-mostrar">
             <div id="registro">
                 <div onClick="ocultarRegistro()">
-                    <img class="cerrar" src="../assets/images/cerrar.png" alt="Cerrar">           
+                    <img class="cerrar" src="./images/cerrar.png" alt="Cerrar">           
                 </div>
                 
                 <h3>Crear cuenta</h3>
@@ -150,15 +150,15 @@
         <div class="container-fluid">
             <div class="row align-items-center ">
                 <div class="col ">
-                    <img src="../assets/images/logoS.png" alt="logo">
+                    <img src="./images/logoS.png" alt="logo">
                 </div>
                 <div class="col">
                     <ul class="text-center m-2">
                         <li>
-                            <a href="#">Inicio</a>
+                            <a th:href="@{/}">Inicio</a>
                         </li>
                         <li>
-                            <a href="#">Nosotros</a>
+                            <a th:href="@{/nosotros}">Nosotros</a>
                         </li>
                         <li>
                             <a href="#">Contactenos</a>
@@ -172,8 +172,8 @@
         </div>
     </footer>
 
-    <script src="../app/registro.js"></script>
-    <script src="../index.js"></script>
+    <script src="./js/registro.js"></script>
+    <script src="./js/index.js"></script>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
         integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">

@@ -58,4 +58,9 @@ public class DemoController {
     public String login(Model model){
         return "login";
     }
+
+    @GetMapping("/nosotros")
+    public String nosotros(Model model){
+        return "/pages/nosotros/index";
+    }
 }

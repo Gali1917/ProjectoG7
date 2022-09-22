@@ -34,7 +34,7 @@
             </div>
             <div id="logo">
                 <span onClick="desplegarTodoInicio()">Tu tienda Online</span>
-                <a href="./index.html">    
+                <a th:href="@{/}">    
                     <img src="./images/logoS.png" alt="Logo">
                 </a>
             </div>
@@ -51,7 +51,7 @@
                 <a th:href="@{/login}">
                     <img class="btn-navbar" src="./images/login.png" alt="Login">
                 </a>       
-                <a href="./pages/nosotros/index.html">
+                <a th:href="@{/nosotros}">
                     <img class="btn-navbar" src="./images/info.png" alt="Informacion">
                 </a>             
             </div>
@@ -94,7 +94,7 @@
                     <a href="./pages/login.html">Iniciar Sesion</a>
                 </li>
                 <li>
-                    <a href="./pages/nosotros/index.html">Nosotros</a>
+                    <a th:href="@{/nosotros}">Nosotros</a>
                 </li>
                 <li>
                     <a href="/">Contactenos</a>
