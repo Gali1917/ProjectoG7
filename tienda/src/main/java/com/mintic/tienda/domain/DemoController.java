@@ -40,10 +40,46 @@ public class DemoController {
     }
 
     //Lista de prendas en DB
-    @GetMapping("/prendas")
+    @GetMapping("/inventario")
+
     public String prendas(Model model) {
         System.out.println("************************* manageClothesDomainImpl.getAllPrendas() :: "+manageClothesDomainImpl.getAllPrendas());
-        model.addAttribute("prendas", manageClothesDomainImpl.getAllPrendas());
-        return "prendas";
+        model.addAttribute("inventario", manageClothesDomainImpl.getAllPrendas());
+        return "inventario";
+    }
+
+    @GetMapping("/")
+    public String index(Model model){
+        return "index";
+    }
+
+    @GetMapping("/login")
+    public String login(Model model){
+        return "login";
+    }
+
+    @GetMapping("/nosotros")
+    public String nosotros(Model model){
+        return "/pages/nosotros/index";
+    }
+
+    @GetMapping("/editar")
+    public String editar(Model model){
+        return "formulario_editar";
+    }
+
+    @GetMapping("/crear")
+    public String crear(Model model){
+        return "formulario";
+    }
+
+    @GetMapping("/man")
+    public String man(Model model){
+        return "man";
+    }
+
+    @GetMapping("/woman")
+    public String woman(Model model){
+        return "woman";
     }
 }

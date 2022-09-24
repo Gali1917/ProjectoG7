@@ -1,0 +1,103 @@
+:root{
+    /* --c1: #CCDBDC;
+    --c2: #80CED7;
+    --c3: #63C7B2;
+    --c4: #8E6C88;
+    --c5: #263D42; */
+    --c1: #F9EAA9;
+    --c2: #F7DC5F;
+    --c3: #F7DC5F;
+    --c4: #787151;
+    --c5: #000000;
+}   
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body::-webkit-scrollbar{
+    width: 10px;
+}
+body::-webkit-scrollbar-track{
+    background-color: var(--c1);
+
+}
+body::-webkit-scrollbar-thumb{
+    height: 200px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.9);
+}
+#portada-man{
+    background-image: url(https://i.postimg.cc/J0fCd0Qh/portada-man.jpg);
+    height: 300px;
+    width: 100vw;
+    margin: 0 auto;
+    margin-top: 56px;
+    padding: 0;
+    object-fit:cover;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+
+}
+#titulo-categoria{
+    display: none;
+}
+#titulo-section{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    margin-bottom: 20px;
+    
+}
+#titulo-section h3{
+    margin-top: 8px;
+    color: var(--c1);
+}
+.titulo-activo{
+    font-size: 28px;
+}
+.titulo-inactivo{
+    font-size: 16px;
+    opacity: 0.7;
+    cursor: pointer;
+    display: none;
+}
+#titulo-section img{
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--c3);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+@media(min-width: 768px){
+    #portada-man{
+        height: 500px;
+    }
+    .titulo-inactivo{
+        display: block;
+    }
+}
+
+@media(min-width: 1200px){
+    #portada-man{
+        border-radius: 30px;
+        max-width: 1100px;
+        height: 600px;
+    }
+    .btn-card-caballeros{
+        display: none;
+    }
+    .sub-cat{
+        width: 50%;
+    }
+    #categoria-caballeros{
+        box-shadow: 0 0 10px var(--c1),
+                    0 0 30px var(--c1),
+                    0 0 60px var(--c1);
+    }
+    #titulo-section{
+        display: none;
+    }
+}
