@@ -14,8 +14,8 @@ public class Prenda {
     
     @Id
     @GeneratedValue( strategy=GenerationType.AUTO )
-    @Column(name = "id_prenda")
-    private Long idPrenda;
+    @Column(name = "id")
+    private Long id;
     
     @Column(name = "nombre")
     private String nombre;
@@ -45,12 +45,12 @@ public class Prenda {
     private String imagen;
     
 
-    public Long getIdPrenda() {
-        return idPrenda;
+    public Long getId() {
+        return id;
     }
 
-    public void setIdPrenda(Long idPrenda) {
-        this.idPrenda = idPrenda;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getNombre() {

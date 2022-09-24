@@ -11,7 +11,7 @@ public class PrendaMapperImpl implements IPrendaMapper {
     @Override
     public Prenda dTOToEntity(PrendaDTO dto) {
         Prenda prenda = new Prenda();
-        prenda.setIdPrenda(dto.getIdPrenda());
+        prenda.setId(dto.getId());
         prenda.setNombre(dto.getNombre());
         prenda.setTalla(dto.getTalla());
         prenda.setTipoPrenda(dto.getTipoPrenda());
@@ -27,7 +27,7 @@ public class PrendaMapperImpl implements IPrendaMapper {
     @Override
     public PrendaDTO entityToDTO(Prenda entity) {
         PrendaDTO prendaDTO = new PrendaDTO();
-        prendaDTO.setIdPrenda(entity.getIdPrenda());
+        prendaDTO.setId(entity.getId());
         prendaDTO.setNombre(entity.getNombre());
         prendaDTO.setTalla(entity.getTalla());
         prendaDTO.setTipoPrenda(entity.getTipoPrenda());

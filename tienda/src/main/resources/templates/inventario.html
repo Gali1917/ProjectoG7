@@ -76,7 +76,6 @@
                     <table id="tabla">
                         <thead>
                             <tr>
-                                <th>ID</th>
                                 <th>Nombre</th>
                                 <th>Talla</th>
                                 <th>Tipo</th>
@@ -89,7 +88,6 @@
                             </tr>    
                         </thead>
                         <tr class="item" th:each="prenda : ${inventario}">
-                            <td th:text="${prenda.idPrenda}" ></td>
                             <td th:text="${prenda.nombre}" ></td>
                             <td th:text="${prenda.talla}" ></td>
                             <td th:text="${prenda.tipoPrenda}" ></td>

@@ -22,7 +22,7 @@ public class DemoController {
         // guardar una prenda en tabla
 
         PrendaDTO prendaDTO = new PrendaDTO();
-        prendaDTO.setIdPrenda(2L);
+        prendaDTO.setId(2L);
         prendaDTO.setNombre("Camisa");
         prendaDTO.setTalla("M");
         prendaDTO.setTipoPrenda("Superior");
