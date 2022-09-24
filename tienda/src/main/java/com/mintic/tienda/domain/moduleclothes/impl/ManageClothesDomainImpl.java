@@ -19,7 +19,7 @@ public class ManageClothesDomainImpl implements IManageClothesDomain{
    public PrendaDTO savePrenda(PrendaDTO prendaDTO) {
     return iManageClothesService.savePrenda(prendaDTO);
    }
-
+   
    public List<PrendaDTO> getAllPrendas() {
     return iManageClothesService.getAllPrendas();
    }
