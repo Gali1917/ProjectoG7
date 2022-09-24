@@ -30,6 +30,7 @@ public class ManageClothesServiceImpl implements IManageClothesService {
     }
 
     @Override
+    
     public List<PrendaDTO> getAllPrendas() {
         return prendaRepo.findAll().stream().map(prendaMapper::entityToDTO).collect(Collectors.toList());
     }

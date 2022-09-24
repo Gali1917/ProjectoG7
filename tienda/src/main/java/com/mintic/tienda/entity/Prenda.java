@@ -20,20 +20,20 @@ public class Prenda {
     @Column(name = "nombre")
     private String nombre;
 
-    @Column(name = "id_talla")
-    private Long idTalla;
+    @Column(name = "talla")
+    private String talla;
 
-    @Column(name = "id_tipo_prenda")
-    private Long idTipoPrenda;
+    @Column(name = "tipo_prenda")
+    private String tipoPrenda;
 
-    @Column(name = "id_genero")
-    private Long idGenero;
+    @Column(name = "genero")
+    private String genero;
 
     @Column(name = "precio")
     private Long precio;
 
-    @Column(name = "id_marca")
-    private Long idMarca;
+    @Column(name = "marca")
+    private String marca;
 
     @Column(name = "detalle")
     private String detalle;
@@ -61,28 +61,28 @@ public class Prenda {
         this.nombre = nombre;
     }
 
-    public Long getIdTalla() {
-        return idTalla;
+    public String getTalla() {
+        return talla;
     }
 
-    public void setIdTalla(Long idTalla) {
-        this.idTalla = idTalla;
+    public void setTalla(String talla) {
+        this.talla = talla;
     }
 
-    public Long getIdTipoPrenda() {
-        return idTipoPrenda;
+    public String getTipoPrenda() {
+        return tipoPrenda;
     }
 
-    public void setIdTipoPrenda(Long idTipoPrenda) {
-        this.idTipoPrenda = idTipoPrenda;
+    public void setTipoPrenda(String tipoPrenda) {
+        this.tipoPrenda = tipoPrenda;
     }
 
-    public Long getIdGenero() {
-        return idGenero;
+    public String getGenero() {
+        return genero;
     }
 
-    public void setIdGenero(Long idGenero) {
-        this.idGenero = idGenero;
+    public void setGenero(String genero) {
+        this.genero = genero;
     }
 
     public Long getPrecio() {
@@ -93,12 +93,12 @@ public class Prenda {
         this.precio = precio;
     }
 
-    public Long getIdMarca() {
-        return idMarca;
+    public String getMarca() {
+        return marca;
     }
 
-    public void setIdMarca(Long idMarca) {
-        this.idMarca = idMarca;
+    public void setMarca(String marca) {
+        this.marca = marca;
     }
 
     public String getDetalle() {

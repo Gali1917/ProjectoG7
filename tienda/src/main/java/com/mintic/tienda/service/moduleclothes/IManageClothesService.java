@@ -10,7 +10,7 @@ import com.mintic.tienda.service.DTO.PrendaDTO;
 public interface IManageClothesService extends IManageClothesDomain {
     
    PrendaDTO savePrenda(PrendaDTO prendaDTO);
-
+   
    
    List<PrendaDTO> getAllPrendas();
 

@@ -6,7 +6,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import com.mintic.tienda.domain.moduleclothes.impl.ManageClothesDomainImpl;
-import com.mintic.tienda.repository.IClienteRepo;
 import com.mintic.tienda.service.DTO.PrendaDTO;
 
 @Controller
@@ -23,13 +22,13 @@ public class DemoController {
         // guardar una prenda en tabla
 
         PrendaDTO prendaDTO = new PrendaDTO();
-        prendaDTO.setIdPrenda(16L);
-        prendaDTO.setNombre("Otra Camisa");
-        prendaDTO.setIdTalla(1L);
-        prendaDTO.setIdTipoPrenda(1L);
-        prendaDTO.setIdGenero(1L);
+        prendaDTO.setIdPrenda(2L);
+        prendaDTO.setNombre("Camisa");
+        prendaDTO.setTalla("M");
+        prendaDTO.setTipoPrenda("Superior");
+        prendaDTO.setGenero("Masculino");
         prendaDTO.setPrecio(29000L);
-        prendaDTO.setIdMarca(2L);
+        prendaDTO.setMarca("Nike");
         prendaDTO.setDetalle("Camisa en algodon para relajarse un domingo");
         prendaDTO.setCantidad(14);
         prendaDTO.setImagen("No disponible");
