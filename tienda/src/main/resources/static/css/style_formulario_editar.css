@@ -156,3 +156,13 @@ h3{
         bottom: 0px;
     }
 }
+.selectStyle {
+    position: absolute;
+    background-color: black;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    color:#F9EAA9;
+    border-bottom: 3px solid var(--c3);
+    border-radius: 30px;
+} 
