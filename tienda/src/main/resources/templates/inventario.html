@@ -102,10 +102,12 @@
                             </td>
                             <td>
                                 <figure id="figure">
-                                    <img src="https://i.postimg.cc/rps6FbqS/trash.png" alt="Quitar producto">
-                                    <a th:href="@{/editar}">
+                                    <a th:href="@{/guardar/{id}(id=${prenda.id})}">
                                         <img src="https://i.postimg.cc/Gm3VqN8Z/editar.png" alt="Editar">
                                     </a>
+                                    <a th:href="@{/eliminar/{id}(id=${prenda.id})}">
+                                        <img src="https://i.postimg.cc/rps6FbqS/trash.png" alt="Quitar producto">
+                                    </a> 
                                 </figure>
                             </td>
                         </tr>
