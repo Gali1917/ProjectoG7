@@ -11,13 +11,13 @@ public class PrendaMapperImpl implements IPrendaMapper {
     @Override
     public Prenda dTOToEntity(PrendaDTO dto) {
         Prenda prenda = new Prenda();
-        prenda.setIdPrenda(dto.getIdPrenda());
+        prenda.setId(dto.getId());
         prenda.setNombre(dto.getNombre());
-        prenda.setIdTalla(dto.getIdTalla());
-        prenda.setIdTipoPrenda(dto.getIdTipoPrenda());
-        prenda.setIdGenero(dto.getIdGenero());
+        prenda.setTalla(dto.getTalla());
+        prenda.setTipoPrenda(dto.getTipoPrenda());
+        prenda.setGenero(dto.getGenero());
         prenda.setPrecio(dto.getPrecio());
-        prenda.setIdMarca(dto.getIdMarca());
+        prenda.setMarca(dto.getMarca());
         prenda.setDetalle(dto.getDetalle());
         prenda.setCantidad(dto.getCantidad());
         prenda.setImagen(dto.getImagen());
@@ -27,13 +27,13 @@ public class PrendaMapperImpl implements IPrendaMapper {
     @Override
     public PrendaDTO entityToDTO(Prenda entity) {
         PrendaDTO prendaDTO = new PrendaDTO();
-        prendaDTO.setIdPrenda(entity.getIdPrenda());
+        prendaDTO.setId(entity.getId());
         prendaDTO.setNombre(entity.getNombre());
-        prendaDTO.setIdTalla(entity.getIdTalla());
-        prendaDTO.setIdTipoPrenda(entity.getIdTipoPrenda());
-        prendaDTO.setIdGenero(entity.getIdGenero());
+        prendaDTO.setTalla(entity.getTalla());
+        prendaDTO.setTipoPrenda(entity.getTipoPrenda());
+        prendaDTO.setGenero(entity.getGenero());
         prendaDTO.setPrecio(entity.getPrecio());
-        prendaDTO.setIdMarca(entity.getIdMarca());
+        prendaDTO.setMarca(entity.getMarca());
         prendaDTO.setDetalle(entity.getDetalle());
         prendaDTO.setCantidad(entity.getCantidad());
         prendaDTO.setImagen(entity.getImagen());

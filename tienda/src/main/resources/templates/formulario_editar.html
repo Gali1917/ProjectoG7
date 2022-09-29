@@ -48,49 +48,72 @@
             <div onClick="history.go(-1);">
                 <img class="cerrar" src="https://i.postimg.cc/Ghx6Pr2F/cerrar.png" alt="Cerrar">           
             </div>  
-            <div class="inputs">
+            <form class="inputs" action="#" th:action="@{/guardar}" th:object="${prenda}" method="post">
 
                 <div class="input-login">
-                    <input id="input-nombre" type="text" required="required">
+                    <input id="id" name="id" th:field="*{id}" disabled>
+                    <label>id:</label>
+                </div>
+
+                <div class="input-login">
+                    <input id="nombre" name="nombre" th:field="*{nombre}" type="text" required="required">
                     <span>Nombre:</span>
                 </div>
                 <div class="input-login">
-                    <input id="input-talla" type="text" required="required">
-                    <span>Talla:</span>
+                        <select id="talla" name="talla" th:field="*{talla}" class="selectStyle"> 
+                            <option value="" selected disabled hidden>Elige Talla</option>
+                            <option value="XS">XS</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                            <option value="2XL">2XL</option>
+                            <option value="3XL">3XL</option>
+                        </select>
                 </div>
                 <div class="input-login">
-                    <input id="input-tipo" type="text" required="required">
-                    <span>Tipo:</span>
+                        <select id="tipoPrenda" name="tipoPrenda" th:field="*{tipoPrenda}" class="selectStyle"> 
+                            <option value="" selected disabled hidden>Tipo</option>
+                            <option value="Superior">Superior</option>
+                            <option value="Inferior">Inferior</option>
+                            <option value="Conjuntos">Conjuntos</option>
+                        </select>
                 </div>
                 <div class="input-login">
-                    <input id="input-genero" type="text" required="required">
-                    <span>Genero:</span>
+                        <select id="genero" name="genero" th:field="*{genero}" class="selectStyle"> 
+                            <option value="" selected disabled hidden>Genero</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Femenino">Femenino</option>
+                        </select>
                 </div>
                 <div class="input-login">
-                    <input id="input-precio" type="text" required="required">
+                    <input id="precio" name="precio" type="text" th:field="*{precio}" required="required">
                     <span>Precio:</span>
                 </div>
                 <div class="input-login">
-                    <input id="input-marca" type="text" required="required">
-                    <span>Marca:</span>
+                        <select id="marca" name="marca" th:field="*{marca}" class="selectStyle"> 
+                            <option value="" selected disabled hidden>Marca</option>
+                            <option value="Charvet">Charvet</option>
+                            <option value="Turnbull & Asser">Turnbull & Asser</option>
+                            <option value="Alexander Kabbaz">Alexander Kabbaz</option>
+                            <option value="Anna Matuozzo">Anna Matuozzo</option>
+                            <option value="Lorenzini">Lorenzini</option>
+                        </select>
                 </div>
                 <div class="input-login">
-                    <input id="input-detalle" type="text" required="required">
+                    <input id="detalle" name="detalle" th:field="*{detalle}" type="text" required="required">
                     <span>Detalle:</span>
                 </div>
                 <div class="input-login">
-                    <input id="input-cantidad" type="text" required="required">
+                    <input id="cantidad" name="cantidad" th:field="*{cantidad}" type="text" required="required">
                     <span>Cantidad:</span>
                 </div>
                 <div class="input-login">
-                    <input id="input-imagen" type="text" required="required">
+                    <input id="imagen" name="imagen" th:field="*{imagen}" type="text" required="required">
                     <span>Imagen:</span>
                 </div>
-            </div>
-                <!-- <a href="./login.html" onClick="iniciarSesion()">
-                    <button class="sombreado btn-primario">Entrar</button>
-                </a> -->
-                <button class="sombreado btn-primario btn-editar" onClick="iniciarSesion()">Editar</button>
+                <button class="sombreado btn-primario btn-editar" type="submit">Guardar</button>
+            </form>
                 
         </div>  
     </main>

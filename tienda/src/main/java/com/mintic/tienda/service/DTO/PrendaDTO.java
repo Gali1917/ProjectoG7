@@ -3,24 +3,24 @@ package com.mintic.tienda.service.DTO;
 
 public class PrendaDTO {
 
-    private Long idPrenda;
+    private Long id;
     private String nombre;
-    private Long idTalla;
-    private Long idTipoPrenda;
-    private Long idGenero;
+    private String talla;
+    private String tipoPrenda;
+    private String genero;
     private Long precio;
-    private Long idMarca;
+    private String marca;
     private String detalle;
     private Integer cantidad;
     private String imagen;
 
 
-    public Long getIdPrenda() {
-        return idPrenda;
+    public Long getId() {
+        return id;
     }
 
-    public void setIdPrenda(Long idPrenda) {
-        this.idPrenda = idPrenda;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getNombre() {
@@ -31,28 +31,28 @@ public class PrendaDTO {
         this.nombre = nombre;
     }
 
-    public Long getIdTalla() {
-        return idTalla;
+    public String getTalla() {
+        return talla;
     }
 
-    public void setIdTalla(Long idTalla) {
-        this.idTalla = idTalla;
+    public void setTalla(String talla) {
+        this.talla = talla;
     }
 
-    public Long getIdTipoPrenda() {
-        return idTipoPrenda;
+    public String getTipoPrenda() {
+        return tipoPrenda;
     }
 
-    public void setIdTipoPrenda(Long idTipoPrenda) {
-        this.idTipoPrenda = idTipoPrenda;
+    public void setTipoPrenda(String tipoPrenda) {
+        this.tipoPrenda = tipoPrenda;
     }
 
-    public Long getIdGenero() {
-        return idGenero;
+    public String getGenero() {
+        return genero;
     }
 
-    public void setIdGenero(Long idGenero) {
-        this.idGenero = idGenero;
+    public void setGenero(String genero) {
+        this.genero = genero;
     }
 
     public Long getPrecio() {
@@ -63,12 +63,12 @@ public class PrendaDTO {
         this.precio = precio;
     }
 
-    public Long getIdMarca() {
-        return idMarca;
+    public String getMarca() {
+        return marca;
     }
 
-    public void setIdMarca(Long idMarca) {
-        this.idMarca = idMarca;
+    public void setMarca(String marca) {
+        this.marca = marca;
     }
 
     public String getDetalle() {
@@ -97,8 +97,8 @@ public class PrendaDTO {
 
     @Override
     public String toString() {
-        return "PrendaDTO [cantidad=" + cantidad + ", detalle=" + detalle + ", idGenero=" + idGenero + ", idMarca="
-                + idMarca + ", idPrenda=" + idPrenda + ", idTalla=" + idTalla + ", idTipoPrenda=" + idTipoPrenda
+        return "PrendaDTO [cantidad=" + cantidad + ", detalle=" + detalle + ", Genero=" + genero + ", Marca="
+                + marca + ", id=" + id + ", Talla=" + talla + ", TipoPrenda=" + tipoPrenda
                 + ", imagen=" + imagen + ", nombre=" + nombre + ", precio=" + precio + "]";
     }
 }
