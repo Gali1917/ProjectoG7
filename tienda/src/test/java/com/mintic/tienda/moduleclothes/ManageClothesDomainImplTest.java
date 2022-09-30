@@ -2,6 +2,7 @@ package com.mintic.tienda.moduleclothes;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.when;
 
@@ -18,6 +19,7 @@ import com.mintic.tienda.entity.Prenda;
 import com.mintic.tienda.mapper.impl.PrendaMapperImpl;
 import com.mintic.tienda.repository.IPrendaRepo;
 import com.mintic.tienda.service.DTO.PrendaDTO;
+import com.mintic.tienda.service.moduleclothes.IManageClothesService;
 import com.mintic.tienda.service.moduleclothes.impl.ManageClothesServiceImpl;
 
 public class ManageClothesDomainImplTest {
@@ -26,19 +28,57 @@ public class ManageClothesDomainImplTest {
     public static final String PRENDA_NULL = "No se está enviando prenda para guardar, objeto nulo";
     public static final String IDPRENDA_NULL = "id nulo, se necesita id para buscar una prenda";
 
-    ManageClothesServiceImpl manageClothesServiceImpl;
+    IManageClothesService iManageClothesService;
     IPrendaRepo prendaRepo;
     PrendaMapperImpl prendaMapper;
     
 
     @BeforeEach
 	private void initSavePrenda() {
-		manageClothesServiceImpl = spy(ManageClothesServiceImpl.class);
+		iManageClothesService = spy(IManageClothesService.class);
         prendaMapper = spy(PrendaMapperImpl.class);
 	}
 
     @Nested
     class validateCRUD {
+    
+
+        @Test
+        @DisplayName("Valida que covierta una entiedad en un DTO")
+	    void validConvertDTOToEntity() throws Exception {
+	
+            //Given
+	    	PrendaDTO prendaDTO = new PrendaDTO();
+            prendaDTO.setId(1L);
+            prendaDTO.setNombre("Camisa");
+            prendaDTO.setTalla("M");
+            prendaDTO.setTipoPrenda("Superior");
+            prendaDTO.setGenero("Masculino");
+            prendaDTO.setPrecio(29000L);
+            prendaDTO.setMarca("Nike");
+            prendaDTO.setDetalle("Camisa en algodon para relajarse un domingo");
+            prendaDTO.setCantidad(14);
+            prendaDTO.setImagen("No disponible");
+
+            Prenda prenda = new Prenda();
+            prenda.setId(1L);
+            prenda.setNombre("Camisa");
+            prenda.setTalla("M");
+            prenda.setTipoPrenda("Superior");
+            prenda.setGenero("Masculino");
+            prenda.setPrecio(29000L);
+            prenda.setMarca("Nike");
+            prenda.setDetalle("Camisa en algodon para relajarse un domingo");
+            prenda.setCantidad(14);
+            prenda.setImagen("No disponible");
+
+
+            Prenda expected = prendaMapper.dTOToEntity(prendaDTO);
+
+
+            //Then
+	        assertEquals(expected, prenda);
+	    }
 
         @Test
         @DisplayName("Valida que se genere excepción al mandar un Null como objeto PrendaDTO")

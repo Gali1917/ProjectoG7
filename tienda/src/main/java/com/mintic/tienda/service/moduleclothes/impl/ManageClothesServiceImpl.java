@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.mintic.tienda.entity.Prenda;
-import com.mintic.tienda.mapper.impl.PrendaMapperImpl;
+import com.mintic.tienda.mapper.IPrendaMapper;
 import com.mintic.tienda.repository.IPrendaRepo;
 import com.mintic.tienda.service.DTO.PrendaDTO;
 import com.mintic.tienda.service.moduleclothes.IManageClothesService;
@@ -19,7 +19,7 @@ public class ManageClothesServiceImpl implements IManageClothesService {
     private IPrendaRepo prendaRepo;
 
     @Autowired
-    private PrendaMapperImpl prendaMapper;
+    private IPrendaMapper prendaMapper;
 
 
     @Override
