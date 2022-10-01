@@ -19,7 +19,7 @@ import com.mintic.tienda.service.moduleclothes.impl.ManageClothesServiceImpl;
 public class ManageClothesDomainImplTest {
     
 
-    public static final String PRENDA_NULL = "No se está enviando prenda para guardar, objeto nulo";
+    public static final String PRENDA_NULL = "No se esta enviando prenda para guardar, objeto nulo";
     public static final String IDPRENDA_NULL = "id nulo, se necesita id para buscar una prenda";
 
     IPrendaRepo prendaRepo;
@@ -29,6 +29,7 @@ public class ManageClothesDomainImplTest {
     @BeforeEach
 	private void initSavePrenda() {
         prendaMapper = spy(PrendaMapperImpl.class);
+        prendaRepo = spy(IPrendaRepo.class);
 	}
 
     @Nested
@@ -77,7 +78,7 @@ public class ManageClothesDomainImplTest {
 	    void validErrorAtSavePrenda() {
 	
             //Given
-            ManageClothesServiceImpl manageClothesServiceImpl = new ManageClothesServiceImpl();
+            ManageClothesServiceImpl manageClothesServiceImpl = new ManageClothesServiceImpl(prendaRepo);
 
             // When
 			final Exception exception = assertThrows(Exception.class,
@@ -92,7 +93,7 @@ public class ManageClothesDomainImplTest {
 	    void validErrorAtGetOnePrenda() {
 	
             //Given
-            ManageClothesServiceImpl manageClothesServiceImpl = new ManageClothesServiceImpl();            
+            ManageClothesServiceImpl manageClothesServiceImpl = new ManageClothesServiceImpl(prendaRepo);            
 
             // When
 			final Exception exception = assertThrows(Exception.class,

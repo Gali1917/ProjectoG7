@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import com.mintic.tienda.domain.moduleclothes.exceptions.ManageClothesDomainException;
 import com.mintic.tienda.service.DTO.PrendaDTO;
 import com.mintic.tienda.service.moduleclothes.IManageClothesService;
 import com.mintic.tienda.service.moduleclothes.exceptions.ManagerClothesServiceException;
@@ -33,7 +34,7 @@ public class DemoController {
     }
 
     @PostMapping("/guardar")
-    public String guardar(PrendaDTO prendaDTO, Model model) throws ManagerClothesServiceException {
+    public String guardar(PrendaDTO prendaDTO, Model model) throws ManagerClothesServiceException, ManageClothesDomainException {
         prendaDTO = iManageClothesService.savePrenda(prendaDTO);
         return "redirect:/inventario";
     }
