@@ -1,4 +1,4 @@
-package com.mintic.tienda.domain.moduleclothes.exceptions;
+package com.mintic.tienda.service.moduleclothes.exceptions;
 
 public class ManagerClothesException  extends Exception{
 
