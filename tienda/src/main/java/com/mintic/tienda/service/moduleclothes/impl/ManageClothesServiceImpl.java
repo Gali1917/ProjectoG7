@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.mintic.tienda.domain.moduleclothes.impl.ManageClothesDomainImpl;
 import com.mintic.tienda.entity.Prenda;
 import com.mintic.tienda.mapper.IPrendaMapper;
 import com.mintic.tienda.repository.IPrendaRepo;
@@ -22,9 +23,12 @@ public class ManageClothesServiceImpl implements IManageClothesService {
     @Autowired
     private IPrendaMapper prendaMapper;
 
+
     @Override
     public PrendaDTO savePrenda(PrendaDTO prendaDTO) throws ManagerClothesServiceException {
         try {
+            ManageClothesDomainImpl manageClothesDomainImpl = new ManageClothesDomainImpl();
+            manageClothesDomainImpl.validatePrenda(prendaDTO);
             Prenda prenda = prendaMapper.dTOToEntity(prendaDTO);
             prenda = prendaRepo.save(prenda);
             return prendaMapper.entityToDTO(prenda);

@@ -1,44 +1,37 @@
 package com.mintic.tienda.domain.moduleclothes.impl;
 
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 import com.mintic.tienda.domain.moduleclothes.IManageClothesDomain;
+import com.mintic.tienda.domain.moduleclothes.exceptions.ManageClothesDomainException;
 import com.mintic.tienda.service.DTO.PrendaDTO;
-import com.mintic.tienda.service.moduleclothes.IManageClothesService;
-import com.mintic.tienda.service.moduleclothes.exceptions.ManagerClothesException;
 
 
-@Component
 public class ManageClothesDomainImpl implements IManageClothesDomain{
 
-   @Autowired
-   private IManageClothesService iManageClothesService;
+   private static final Long MINIMAL_PRICE = 1000L;
+   private static final Integer MINIMUM_QUANTITY_OF_CLOTHING = 10;
 
-   public PrendaDTO savePrenda(PrendaDTO prendaDTO) throws ManagerClothesException {
-      try {
-         return iManageClothesService.savePrenda(prendaDTO);
-      } catch (Exception e) {
-         throw new ManagerClothesException(ManagerClothesException.PRENDA_NULL);
+
+   @Override
+   public void validatePrenda(PrendaDTO prendaDTO) throws ManageClothesDomainException {
+
+      Long price = prendaDTO.getPrecio();
+
+      if(price < MINIMAL_PRICE) {
+         throw new ManageClothesDomainException(ManageClothesDomainException.MINIMUM_PRICE_MESSAGE);
       }
-    
-   }
-   
-   public List<PrendaDTO> getAllPrendas() {
-    return iManageClothesService.getAllPrendas();
+
+      int quantity = prendaDTO.getCantidad();
+
+      if(quantity < MINIMUM_QUANTITY_OF_CLOTHING) {
+         throw new ManageClothesDomainException(ManageClothesDomainException.MESSAGE_MINIMUM_QUANTITY);
+      }
+
+      String typeOfClothing = prendaDTO.getTipoPrenda();
+
+      if(typeOfClothing.isEmpty() || typeOfClothing.isBlank()) {
+         throw new ManageClothesDomainException(ManageClothesDomainException.TYPE_OF_CLOTHING_IS_NECESSARY);
+      }
    }
 
-   public PrendaDTO getOnePrenda(Long idPrenda) throws ManagerClothesException {
-    try {
-      return iManageClothesService.getOnePrenda(idPrenda);
-    } catch (Exception e) {
-      throw new ManagerClothesException(ManagerClothesException.IDPRENDA_NULL);
-    }
-   }
-
-   public void deletePrendaById(Long idPrenda) {
-    iManageClothesService.deletePrendaById(idPrenda);
-   }
 }
