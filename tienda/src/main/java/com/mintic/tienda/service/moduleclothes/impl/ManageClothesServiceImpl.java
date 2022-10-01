@@ -32,15 +32,17 @@ public class ManageClothesServiceImpl implements IManageClothesService {
 
     @Override
     public PrendaDTO savePrenda(PrendaDTO prendaDTO) throws ManagerClothesServiceException, ManageClothesDomainException {
-        try {
-            ManageClothesDomainImpl manageClothesDomainImpl = new ManageClothesDomainImpl();
-            manageClothesDomainImpl.validatePrenda(prendaDTO);
-            Prenda prenda = prendaMapper.dTOToEntity(prendaDTO);
-            prenda = prendaRepo.save(prenda);
-            return prendaMapper.entityToDTO(prenda);
-        } catch (Exception e) {
+        
+        if(prendaDTO == null) {
             throw new ManagerClothesServiceException(ManagerClothesServiceException.PRENDA_NULL);
-        }
+        }    
+
+        ManageClothesDomainImpl manageClothesDomainImpl = new ManageClothesDomainImpl();
+        manageClothesDomainImpl.validatePrenda(prendaDTO);
+        
+        Prenda prenda = prendaMapper.dTOToEntity(prendaDTO);
+        prenda = prendaRepo.save(prenda);
+        return prendaMapper.entityToDTO(prenda);
     }
 
     @Override
