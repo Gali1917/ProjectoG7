@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import com.mintic.tienda.service.DTO.PrendaDTO;
 import com.mintic.tienda.service.moduleclothes.IManageClothesService;
-import com.mintic.tienda.service.moduleclothes.exceptions.ManagerClothesException;
+import com.mintic.tienda.service.moduleclothes.exceptions.ManagerClothesServiceException;
 
 @Controller
 public class DemoController {
@@ -21,7 +21,7 @@ public class DemoController {
     }
 
     @GetMapping("/guardar/{id}")
-    public String actualizar(@PathVariable("id") Long id, Model model) throws ManagerClothesException {
+    public String actualizar(@PathVariable("id") Long id, Model model) throws ManagerClothesServiceException {
         if(id != null && id != 0) {
             model.addAttribute("prenda", iManageClothesService.getOnePrenda(id));
         } else {
@@ -31,7 +31,7 @@ public class DemoController {
     }
 
     @PostMapping("/guardar")
-    public String guardar(PrendaDTO prendaDTO, Model model) throws ManagerClothesException {
+    public String guardar(PrendaDTO prendaDTO, Model model) throws ManagerClothesServiceException {
         prendaDTO = iManageClothesService.savePrenda(prendaDTO);
         return "redirect:/inventario";
     }
