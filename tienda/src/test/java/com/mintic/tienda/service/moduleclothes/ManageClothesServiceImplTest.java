@@ -1,4 +1,4 @@
-package com.mintic.tienda.moduleclothes;
+package com.mintic.tienda.service.moduleclothes;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -16,7 +16,7 @@ import com.mintic.tienda.repository.IPrendaRepo;
 import com.mintic.tienda.service.DTO.PrendaDTO;
 import com.mintic.tienda.service.moduleclothes.impl.ManageClothesServiceImpl;
 
-public class ManageClothesDomainImplTest {
+public class ManageClothesServiceImplTest {
     
 
     public static final String PRENDA_NULL = "No se esta enviando prenda para guardar, objeto nulo";
