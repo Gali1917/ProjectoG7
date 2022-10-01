@@ -49,11 +49,8 @@
                 <img class="cerrar" src="https://i.postimg.cc/Ghx6Pr2F/cerrar.png" alt="Cerrar">           
             </div>  
             <form class="inputs" action="#" th:action="@{/guardar}" th:object="${prenda}" method="post">
-
-                <div class="input-login">
-                    <input id="id" name="id" th:field="*{id}" disabled>
-                    <label>id:</label>
-                </div>
+                
+                <input type="hidden" id="id" name="id" th:field="*{id}"> 
 
                 <div class="input-login">
                     <input id="nombre" name="nombre" th:field="*{nombre}" type="text" required="required">
