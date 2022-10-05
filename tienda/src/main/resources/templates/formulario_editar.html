@@ -84,7 +84,7 @@
                         </select>
                 </div>
                 <div class="input-login">
-                    <input id="precio" name="precio" type="text" th:field="*{precio}" required="required">
+                    <input id="precio" name="precio" type="number" min="1000" th:field="*{precio}" required="required">
                     <span>Precio:</span>
                 </div>
                 <div class="input-login">
@@ -102,7 +102,7 @@
                     <span>Detalle:</span>
                 </div>
                 <div class="input-login">
-                    <input id="cantidad" name="cantidad" th:field="*{cantidad}" type="text" required="required">
+                    <input id="cantidad" name="cantidad" th:field="*{cantidad}" min="10" type="number" required="required">
                     <span>Cantidad:</span>
                 </div>
                 <div class="input-login">
